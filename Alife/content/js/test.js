@@ -2,6 +2,7 @@ $(function () {
   var swiper = new Swiper('.swiper', {
     direction: 'vertical',
     simulateTouch: false,
+    allowTouchMove: false,
     speed: 1000,
     navigation: {
       nextEl: '.swiper-button-next',

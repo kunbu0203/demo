@@ -431,10 +431,11 @@ body {
     color: #fff;
     border: 1px solid #454346;
     background-color: #454346; }
-  .btn:hover {
-    color: #fff;
-    border: 1px solid #000;
-    background-color: #000; }
+  @media only screen and (min-width: 960px) {
+    .btn:hover {
+      color: #fff;
+      border: 1px solid #000;
+      background-color: #000; } }
   @media only screen and (max-width: 1679px) {
     .btn {
       font-size: 21px; } }
@@ -481,10 +482,11 @@ body {
     background-size: 150%;
     background-position: center;
     transition: .4s; }
-  .btnBlock:hover .bg::after {
-    opacity: 1; }
-  .btnBlock:hover .arrow {
-    background-position: center -250%; }
+  @media only screen and (min-width: 960px) {
+    .btnBlock:hover .bg::after {
+      opacity: 1; }
+    .btnBlock:hover .arrow {
+      background-position: center -250%; } }
   .btnBlock .title {
     flex: 0 0 auto;
     max-width: 100%; }
@@ -1353,13 +1355,14 @@ table {
   .testRadio-input:checked ~ .testRadio-label {
     font-weight: bold;
     border: 1px solid #000; }
-  .testRadio:hover .testRadio-label {
-    background-color: rgba(170, 170, 170, 0.8); }
-  .testRadio:hover .testRadio-num {
-    transform: translate(-50%, -50%);
-    width: 4em; }
-    .testRadio:hover .testRadio-num::before {
-      content: 'KEY '; }
+  @media only screen and (min-width: 960px) {
+    .testRadio:hover .testRadio-label {
+      background-color: rgba(170, 170, 170, 0.8); }
+    .testRadio:hover .testRadio-num {
+      transform: translate(-50%, -50%);
+      width: 4em; }
+      .testRadio:hover .testRadio-num::before {
+        content: 'KEY '; } }
   .testRadio + .testRadio {
     margin-top: 1em; }
   @media only screen and (max-width: 1679px) {
@@ -1457,6 +1460,7 @@ ol {
     .swiper .swiper-rtl .swiper-button-next,
     .swiper .swiper-button-next,
     .swiper .swiper-rtl .swiper-button-prev {
+      position: fixed;
       bottom: 14px;
       padding: 3px 6px 2px 6px; }
       .swiper .swiper-button-prev::after,
