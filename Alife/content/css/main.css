@@ -540,13 +540,17 @@ body {
     .testAction {
       font-size: 23px; } }
 
+.link {
+  color: #000;
+  text-decoration: none; }
+
 .wrap {
   position: relative;
   box-sizing: border-box;
   max-width: 1680px;
   height: 100%;
   margin: auto;
-  padding: 0 40px; }
+  padding: 0 80px; }
   @media only screen and (max-width: 959px) {
     .wrap {
       padding: 0 30px; } }
@@ -720,9 +724,23 @@ body {
   justify-content: center;
   align-items: center; }
 
+#guide .title {
+  min-width: 790px; }
+
+@media only screen and (max-width: 1679px) {
+  #guide .title {
+    min-width: 687px; } }
+
 @media only screen and (max-width: 959px) {
+  #guide .title {
+    min-width: 630px; }
   #guide .bg img {
     min-width: 100vh; } }
+
+@media only screen and (max-width: 767px) {
+  #guide .title {
+    width: 100%;
+    min-width: auto; } }
 
 #intro .wrap {
   display: flex;
@@ -789,6 +807,9 @@ body {
   .graphic-content {
     flex: 1;
     order: 1; }
+  @media only screen and (max-width: 1679px) {
+    .graphic-img {
+      margin-left: 7%; } }
   @media only screen and (max-width: 959px) {
     .graphic {
       flex-wrap: wrap; }
@@ -856,7 +877,9 @@ body {
     margin-bottom: 60px; }
   @media only screen and (max-width: 1679px) {
     #faq {
-      padding: 153px 0; } }
+      padding: 153px 0; }
+      #faq .graphic-content {
+        margin-left: 7%; } }
   @media only screen and (max-width: 959px) {
     #faq {
       padding: 141px 0; }
@@ -1042,6 +1065,17 @@ body {
       font-size: 23px; }
     .result-text {
       font-size: 16px; } }
+
+.wine {
+  flex: 0 0 auto;
+  width: 5%;
+  padding-top: 5%;
+  background-image: url(../images/wine.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  opacity: 0; }
 
 .card {
   display: flex;
@@ -1284,6 +1318,7 @@ table {
     opacity: 0; }
   .radio-label {
     position: relative;
+    display: inline-block;
     padding-left: 1.5em; }
     .radio-label::before, .radio-label::after {
       content: '';
@@ -1496,6 +1531,8 @@ p {
   margin-bottom: 113px; }
   .title.vCenter {
     margin-bottom: 0; }
+  .title.wt {
+    color: #fff; }
   .title-logo {
     margin-bottom: 32px; }
     .title-logo img {

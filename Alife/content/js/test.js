@@ -12,12 +12,9 @@ $(function () {
   swiper.on('slideChange', function () {
     nextBtnShowHide(swiper.activeIndex);
   });
-  $('[data-send]').on('click', function (e) {
+  $('[data-close]').on('click', function (e) {
     e.preventDefault();
-    $('#testForm').fadeOut();
-    $('#testResult').fadeIn(function () {
-      $(this).removeClass('hide');
-    });
+    $('[data-header]').removeClass('menuOpen');
   });
   $('[data-start]').on('click', function (e) {
     e.preventDefault();
@@ -27,9 +24,24 @@ $(function () {
       $('.swiper-button-next').addClass('swiper-button-disabled');
     });
   });
+  $('[data-send]').on('click', function (e) {
+    e.preventDefault();
+    $('#testForm').fadeOut();
+    $('#testResult').fadeIn(function () {
+      $(this).removeClass('hide');
+    });
+  });
+  $('[data-signup]').on('click', function (e) {
+    e.preventDefault();
+    $('#testResult').fadeOut();
+    $('#form').fadeIn(function () {
+      $(this).removeClass('hide');
+    });
+  });
   $('[data-next]').on('click', function (e) {
     e.preventDefault();
     swiper.slideNext();
+    tl.play();
   });
   $('[data-test-radio]').on('change', function (e) {
     e.preventDefault();
