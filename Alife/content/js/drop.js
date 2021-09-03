@@ -12,7 +12,7 @@ tl.to('.wine', {
     //ease: 'bounce.out',
     y: H,
     rotation: 'random(-180, 180)',
-    duration: 1.5,
+    duration: 2,
     stagger: {
         amount: 0.4,
         from: "random"
