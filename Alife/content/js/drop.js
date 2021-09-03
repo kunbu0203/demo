@@ -1,7 +1,7 @@
 var tl = gsap.timeline({
     onComplete: myFunction
 });
-var H = $(window).height();
+var H = $(window).height() + $(window).width() * 0.05;
 // var wineH = $(window).width() * 0.05,
 //     H = $(window).height() - (wineH * 1.7),
 //     fromH = H - (wineH * 0.4);
@@ -12,7 +12,7 @@ tl.to('.wine', {
     //ease: 'bounce.out',
     y: H,
     rotation: 'random(-180, 180)',
-    duration: 2,
+    duration: 1.5,
     stagger: {
         amount: 0.4,
         from: "random"
