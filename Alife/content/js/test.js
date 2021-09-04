@@ -1,4 +1,14 @@
 $(function () {
+  var url = location.href;
+
+  if (url.indexOf('?signUp') != -1) {
+    $('[data-popup]').fadeIn();
+  }
+
+  $('[data-close-popup]').on('click', function (e) {
+    e.preventDefault();
+    $('[data-popup]').fadeOut();
+  });
   var swiper = new Swiper('.swiper', {
     direction: 'vertical',
     simulateTouch: false,
@@ -11,10 +21,6 @@ $(function () {
   });
   swiper.on('slideChange', function () {
     nextBtnShowHide(swiper.activeIndex);
-  });
-  $('[data-close]').on('click', function (e) {
-    e.preventDefault();
-    $('[data-header]').removeClass('menuOpen');
   });
   $('[data-start]').on('click', function (e) {
     e.preventDefault();
@@ -38,15 +44,38 @@ $(function () {
       $(this).removeClass('hide');
     });
   });
+  var tl = gsap.timeline(),
+      H = $(window).height() + $(window).width() * 0.15;
+  var tween = gsap.to('.drop-item', {
+    y: function y() {
+      return H;
+    },
+    rotation: 'random(-180, 180)',
+    duration: 2,
+    stagger: {
+      amount: 0.4,
+      from: "random"
+    }
+  });
+  tl.add(tween).to('.drop-item', {
+    opacity: 0,
+    duration: 0.1
+  });
+  tl.pause();
   $('[data-next]').on('click', function (e) {
     e.preventDefault();
+    changeDropImg(swiper.activeIndex);
+    gsap.set(".drop-item", {
+      y: 0
+    });
+    H = $(window).height() + $(window).width() * 0.15;
+    tween.invalidate();
+    tl.restart();
     swiper.slideNext();
-    tl.play();
   });
   $('[data-test-radio]').on('change', function (e) {
     e.preventDefault();
-    var activeSlider = swiper.activeIndex;
-    nextBtnShowHide(activeSlider);
+    nextBtnShowHide(swiper.activeIndex);
   });
 
   var nameBoolean = false,
@@ -82,3 +111,11 @@ function nextBtnShowHide(activeSlider) {
     $('.swiper-button-next').addClass('swiper-button-disabled');
   }
 }
+
+function changeDropImg(activeSlider) {
+  var $thisSlider = $('[data-slider]').eq(activeSlider),
+      theme = $thisSlider.data('slider');
+  $('.drop').removeClass().addClass('drop').addClass(theme);
+}
+
+function dropDown(tl, H) {}
