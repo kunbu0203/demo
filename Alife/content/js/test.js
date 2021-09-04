@@ -64,7 +64,6 @@ $(function () {
   tl.pause();
   $('[data-next]').on('click', function (e) {
     e.preventDefault();
-    changeDropImg(swiper.activeIndex);
     gsap.set(".drop-item", {
       y: 0
     });
@@ -76,6 +75,7 @@ $(function () {
   $('[data-test-radio]').on('change', function (e) {
     e.preventDefault();
     nextBtnShowHide(swiper.activeIndex);
+    changeDropImg(swiper.activeIndex);
   });
 
   var nameBoolean = false,
