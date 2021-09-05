@@ -1137,6 +1137,9 @@ body {
     background-image: url(../images/icon/home.svg); }
   .drop.symbol .drop-item {
     background-image: url(../images/icon/symbol.svg); }
+  @media only screen and (max-width: 959px) {
+    .drop {
+      display: none; } }
 
 .card {
   display: flex;
