@@ -245,7 +245,7 @@ header {
   .banner-pic img {
     width: 100%; }
   .banner-action {
-    position: absolute;
+    position: fixed;
     right: 3.85%;
     bottom: 42px; }
   .banner-btn {
