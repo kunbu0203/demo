@@ -1,0 +1,12 @@
+{
+    "name": "ASUS",
+    "short_name": "ASUS",
+    "icons": [{
+        "src": "content/images/touch/logo.png",
+        "type": "image/png",
+        "sizes": "500x500"
+    }],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#fafafa",
+    "theme_color": "#fafafa"
+}
