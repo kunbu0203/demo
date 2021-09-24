@@ -349,7 +349,9 @@ body {
   .block.intro .block-pic {
     position: relative;
     width: 51.4%;
-    padding-bottom: 27%; }
+    padding-bottom: 27%;
+    border-radius: 25px;
+    overflow: hidden; }
     .block.intro .block-pic iframe {
       position: absolute;
       top: 0;
