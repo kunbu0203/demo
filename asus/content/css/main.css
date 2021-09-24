@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("./../font/NotoSansTC-Regular.otf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("./../font/NotoSansTC-Bold.otf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("./../font/NotoSansTC-Medium.otf");
+  font-weight: 500; }
+
 html,
 body {
   font-family: "Noto Sans TC", sans-serif, Arial, "Microsoft JhengHei", Helvetica;
@@ -84,6 +99,21 @@ textarea {
   background: #ccc;
   padding: 0.2em 0; }
 
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("./../font/NotoSansTC-Regular.otf");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("./../font/NotoSansTC-Bold.otf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("./../font/NotoSansTC-Medium.otf");
+  font-weight: 500; }
+
 html,
 body {
   height: 100%; }
@@ -91,6 +121,9 @@ body {
 .container {
   min-height: 100%;
   overflow: hidden; }
+
+[data-float] {
+  transition: .5s; }
 
 /* ------------------------------- Header ------------------------------- */
 /* ------------------------------- Main ------------------------------- */

@@ -85,4 +85,45 @@ $(function () {
     e.preventDefault();
     $('[data-popup]').addClass('hide');
   });
+  gsap.registerPlugin(ScrollTrigger);
+  var floatTop = gsap.timeline({
+    defaults: {
+      ease: 'none'
+    }
+  });
+  floatTop.from('[data-float="top"]', {
+    y: 40,
+    duration: 1
+  }).to('[data-float="top"]', {
+    y: -60,
+    duration: 1
+  });
+  ScrollTrigger.create({
+    animation: floatTop,
+    trigger: '.container',
+    // markers: true,
+    start: 'top center',
+    end: 'bottom center',
+    scrub: true
+  });
+  var floatBottom = gsap.timeline({
+    defaults: {
+      ease: 'none'
+    }
+  });
+  floatBottom.from('[data-float="bottom"]', {
+    y: -60,
+    duration: 1
+  }).to('[data-float="bottom"]', {
+    y: 40,
+    duration: 1
+  });
+  ScrollTrigger.create({
+    animation: floatBottom,
+    trigger: '.container',
+    // markers: true,
+    start: 'top center',
+    end: 'bottom center',
+    scrub: true
+  });
 });
