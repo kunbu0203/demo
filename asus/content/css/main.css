@@ -93,26 +93,7 @@ body {
   overflow: hidden; }
 
 /* ------------------------------- Header ------------------------------- */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 84px;
-  background-color: #fff;
-  box-shadow: 0 0 0 1px #ccc;
-  z-index: 99; }
-  @media only screen and (max-width: 1023px) {
-    header {
-      height: 48px; } }
-
 /* ------------------------------- Main ------------------------------- */
-.main {
-  padding-top: 84px; }
-  @media only screen and (max-width: 1023px) {
-    .main {
-      padding-top: 48px; } }
-
 /* ------------------------------- Footer ------------------------------- */
 /* ------------------------------- Floating tool ------------------------------- */
 .mediaIcons {
@@ -133,7 +114,7 @@ header {
       background-position: center;
       background-size: 100%;
       background-repeat: no-repeat;
-      opacity: .4; }
+      opacity: 0.4; }
       .mediaIcons li a.facebook {
         background-image: url(../images/icon/social/facebook-bk.png); }
       .mediaIcons li a.line {
@@ -352,7 +333,7 @@ header {
       position: relative;
       z-index: 1; }
     .block.idea .block-title::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 1.94em;
       right: 0;
@@ -366,7 +347,15 @@ header {
     padding: 3.5% 0 2.3% 0;
     background-color: #e1fff1; }
   .block.intro .block-pic {
-    width: 51.4%; }
+    position: relative;
+    width: 51.4%;
+    padding-bottom: 27%; }
+    .block.intro .block-pic iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   .block.intro .block-text {
     position: relative;
     width: 25.7%;
@@ -454,7 +443,7 @@ header {
       top: 0;
       right: 15%; }
       .block.share .block-title div::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 3.2em;
         left: -0.42em;
@@ -485,7 +474,8 @@ header {
         width: 4.5em;
         height: 3.65em; }
     .block.intro .block-pic {
-      width: 50%; }
+      width: 50%;
+      padding-bottom: 18%; }
     .block.intro .block-text {
       width: 36%; }
     .block.share .block-title {
@@ -527,6 +517,7 @@ header {
       padding: 40px 0 60px 0; }
     .block.intro .block-pic {
       width: 100%;
+      padding-bottom: 56%;
       margin-bottom: 35px; }
     .block.intro .block-text {
       width: 100%;
@@ -612,7 +603,7 @@ header {
   border-radius: 30px;
   background-color: #fff; }
   .designer .rectangle {
-    content: '';
+    content: "";
     position: absolute;
     left: -3.56%;
     top: -4.76%;
@@ -632,7 +623,7 @@ header {
     min-width: 180px;
     padding-bottom: 3.8%; }
     .designer-pic .triangle {
-      content: '';
+      content: "";
       position: absolute;
       right: -16%;
       bottom: 0;
@@ -731,7 +722,7 @@ header {
     overflow: hidden; }
     .cardBlock-pic img {
       width: 100%;
-      transition: .8s; }
+      transition: 0.8s; }
   .cardBlock-content {
     padding: 22px 22px 40px 22px;
     background-color: #fff;
@@ -745,7 +736,7 @@ header {
     font-weight: bold;
     color: #8c79c7; }
     .cardBlock-link::after {
-      content: '';
+      content: "";
       display: inline-block;
       vertical-align: middle;
       width: 46px;
@@ -754,7 +745,7 @@ header {
       background-image: url(../images/share/linkArrow.png);
       background-repeat: no-repeat;
       background-size: 100%;
-      transition: .4s; }
+      transition: 0.4s; }
   .cardBlock:hover .cardBlock-pic img {
     transform: scale(1.2); }
   .cardBlock:hover .cardBlock-link::after {
@@ -795,8 +786,8 @@ header {
           animation-fill-mode: forwards; }
 
 .fadeIn .fade02 {
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s; }
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s; }
 
 .fadeIn .fade03 {
   -webkit-animation-delay: 1s;

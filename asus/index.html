@@ -35,12 +35,35 @@
     <!-- Page css / End -->
 
     <meta name="theme-color" content="#fafafa">
+
+    <!-- Google Tag Manager -->
+    
+<script>
+(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js'
+  });
+  var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-NJRLM8');
+</script>
+
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJRLM8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!--[if lte IE 11]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
     <div class="container">
-        <header></header>
         <main class="main">
             
 <section class="banner">
@@ -49,8 +72,8 @@
         <img src="./content/images/banner/banner-mb.jpg" class="mbOnly" alt="">
     </div>
     <div class="banner-action">
-        <a href="#" class="banner-btn buy">立即購買 ›</a>
-        <a href="#" class="banner-btn login">前往登錄 ›</a>
+        <a href="https://store.asus.com/tw/item/202105DM040000001/D5991" class="banner-btn buy" target="_blank">立即購買 ›</a>
+        <a href="https://www.asus.com/tw/events/infoM/activity_Zenfone-8-Oct" class="banner-btn login" target="_blank">前往登錄 ›</a>
     </div>
 </section>
 <section class="block idea" data-idea>
@@ -110,7 +133,7 @@
             </div>
         </div>
         <div class="block-pic fade01">
-            <img src="./content/images/intro/video.png" alt="">
+            <iframe src="https://www.youtube.com/embed/-smxwHmAHVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="block-text fade02">
             <div class="triangle">
@@ -138,10 +161,10 @@
             </div>
             <div class="action">
                 <div class="action-item">
-                    <a href="#" class="btn sub">了解更多 ›</a>
+                    <a href="https://www.asus.com/tw/events/infoM/activity_Zenfone-8-Oct" class="btn sub" target="_blank">了解更多 ›</a>
                 </div>
                 <div class="action-item">
-                    <a href="#" class="btn">立即購買 ›</a>
+                    <a href="https://store.asus.com/tw/item/202105DM040000001/D5991" class="btn" target="_blank">立即購買 ›</a>
                 </div>
             </div>
         </div>
@@ -244,7 +267,7 @@
             </ul>
             <div class="action">
                 <div class="action-item">
-                    <a href="#" class="btn sub">立即前往登錄 ›</a>
+                    <a href="https://www.asus.com/tw/events/infoM/activity_Zenfone-8-Oct" class="btn sub" target="_blank">立即前往登錄 ›</a>
                 </div>
             </div>
         </div>
@@ -331,7 +354,6 @@
                                 </div>
                             </a>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -380,7 +402,7 @@
                     </div>
                     <div class="swiper-info">
                         <div class="swiper-popup-prev"></div>
-                        <p><span class="swiper-popup-index">1</span> / 5</p>
+                        <p><span class="swiper-popup-index">1</span> / 6</p>
                         <div class="swiper-popup-next"></div>
                     </div>
                 </div>
@@ -393,6 +415,73 @@
     <script src="./content/vendor/jquery-3.6.0.min.js"></script>
     <script src="./content/js/plugins.min.js"></script>
     <script src="./content/js/main.min.js"></script>
+    
+<script>
+window.AsusAPIConfig = {
+  appID: 'event00002',
+  websitePath: 'tw',
+  language: "zh-tw",
+  eliteToken: '',
+  isHasCookieBanner: true,
+  judgment: ' rog',
+  development: 'false'
+};
+
+(function (d) {
+  var w = window.AsusAPIConfig ? window.AsusAPIConfig : {};
+  var official = w.development && w.development.official ? w.development.official : '//www.asus.com/';
+  var rog = w.development && w.development.rog ? w.development.rog : 'rog.asus.com';
+
+  var isROG = function isROG() {
+    return w.judgment ? window.location.href.indexOf(w.judgment) >= 0 : document.referrer && document.referrer.indexOf('rog.asus.com') >= 0;
+  };
+
+  var api_js = isROG() ? rog + 'dist/export/export.js' : official + 'API/js/asus_api.js';
+  var js,
+      id = 'asus-jsapi';
+
+  if (d.getElementById("asus-jsapi")) {
+    return;
+  }
+
+  js = d.createElement('script');
+  js.id = id;
+  js.async = true;
+  js.src = api_js;
+  d.getElementsByTagName('head')[0].appendChild(js);
+
+  if (isROG()) {
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    css.media = 'screen';
+    css.href = rog + 'dist/export/export.css';
+    var s = document.getElementsByTagName('head')[0];
+    s.appendChild(css);
+    var initialParam = {
+      appID: w.appID,
+      isHasCookieBanner: w.isHasCookieBanner,
+      tokenID: w.eliteToken,
+      activedType: "initial",
+      websiteID: w.websiteID,
+      websitePath: w.websitePath,
+      language: w.language
+    };
+    var watchWindow = setInterval(function () {
+      window.ROGTemplateWorld && (window.ROGTemplateWorld(initialParam), clearInterval(watchWindow));
+    }, 1);
+    watchWindow && "function" == typeof watchWindow && watchWindow();
+  } else {
+    window.ASUSInit = function () {
+      asus_api.init({
+        appkey: w.appID,
+        lang: w.websitePath
+      });
+    };
+  }
+})(document);
+</script>
+
     <!-- Global js / End -->
 
     <!-- Page js / Begin -->
