@@ -13,10 +13,11 @@ $(function () {
 
     if (scrollT > $('[data-event]').offset().top - halfScreenH) {
       $('[data-event]').addClass('fadeIn');
-    } // if (scrollT > $('[data-share]').offset().top - halfScreenH) {
-    //     $('[data-share]').addClass('fadeIn');
-    // }
+    }
 
+    if (scrollT > $('[data-share]').offset().top - halfScreenH) {
+      $('[data-share]').addClass('fadeIn');
+    }
   }).trigger('scroll');
   var swiperTop = new Swiper('[data-slider-top]', {
     effect: 'fade',
@@ -36,25 +37,30 @@ $(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
-  }); // var swiperCard = new Swiper('[data-slider-card]', {
-  //     centeredSlides: true,
-  //     slidesPerView: 5.5,
-  //     breakpoints: {
-  //         1023: {
-  //             centeredSlides: false,
-  //             slidesPerView: 2
-  //         },
-  //         767: {
-  //             centeredSlides: false,
-  //             slidesPerView: 1
-  //         }
-  //     },
-  //     navigation: {
-  //         nextEl: '.swiper-card-next',
-  //         prevEl: '.swiper-card-prev',
-  //     }
-  // });
-
+  });
+  var swiperCard = new Swiper('[data-slider-card]', {
+    centeredSlides: true,
+    slidesPerView: 5.5,
+    breakpoints: {
+      1023: {
+        centeredSlides: false,
+        slidesPerView: 2
+      },
+      767: {
+        centeredSlides: false,
+        slidesPerView: 1
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-card-next',
+      prevEl: '.swiper-card-prev'
+    },
+    on: {
+      init: function init() {
+        $('.swiper-card-length').text(this.slides.length);
+      }
+    }
+  });
   var swiperPopup = new Swiper('[data-slider-popup]', {
     slidesPerView: 1,
     navigation: {
@@ -64,10 +70,10 @@ $(function () {
   });
   swiperBottom.on('slideChange', function () {
     swiperTop.slideTo(swiperBottom.realIndex, 0);
-  }); // swiperCard.on('slideChange', function() {
-  //     $('.swiper-card-index').text(swiperCard.realIndex + 1);
-  // });
-
+  });
+  swiperCard.on('slideChange', function () {
+    $('.swiper-card-index').text(swiperCard.realIndex + 1);
+  });
   swiperPopup.on('slideChange', function () {
     setTimeout(function () {
       swiperBottom.slideTo(swiperPopup.realIndex, 500);

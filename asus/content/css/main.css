@@ -940,7 +940,7 @@ ul {
     padding: 0; }
   .swiper.card .swiper-slide {
     box-sizing: border-box;
-    padding: 0 1%; }
+    padding: 0 0.8%; }
     .swiper.card .swiper-slide:nth-of-type(even) {
       padding-top: 5.5%; }
   .swiper.pic .swiper-slide {
