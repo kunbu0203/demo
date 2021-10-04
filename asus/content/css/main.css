@@ -350,6 +350,12 @@ body {
     position: relative;
     width: 41.8%;
     margin-left: 5.7%; }
+    .block.idea .block-text .textrapper {
+      display: inline-block;
+      text-align: center; }
+    .block.idea .block-text .logotype {
+      margin-right: auto;
+      margin-left: auto; }
     .block.idea .block-text p {
       line-height: 2; }
   .block.idea .block-title {
@@ -382,7 +388,8 @@ body {
   .block.intro .block-pic {
     position: relative;
     width: 51.4%;
-    padding-bottom: 27%;
+    height: 0;
+    padding-bottom: 28.9%;
     border-radius: 25px;
     overflow: hidden; }
     .block.intro .block-pic iframe {
@@ -461,11 +468,8 @@ body {
     padding: 0;
     overflow: hidden; }
   .block.share .block-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 26%;
-    height: 100%;
+    flex: 0 0 auto;
+    margin-right: 70px;
     font-size: 48px;
     font-weight: bold;
     -webkit-writing-mode: vertical-lr;
@@ -474,9 +478,7 @@ body {
     z-index: 5;
     background-color: #e3ecfd; }
     .block.share .block-title div {
-      position: absolute;
-      top: 0;
-      right: 15%; }
+      position: relative; }
       .block.share .block-title div::before {
         content: "";
         position: absolute;
@@ -492,7 +494,7 @@ body {
       position: relative;
       z-index: 1; }
   .block.share .block-text {
-    width: 125%; }
+    width: 75%; }
   @media only screen and (max-width: 1479px) {
     .block.idea .block-pic {
       width: 38%; }
@@ -510,11 +512,14 @@ body {
         height: 3.65em; }
     .block.intro .block-pic {
       width: 50%;
-      padding-bottom: 18%; }
+      padding-bottom: 28.2%; }
     .block.intro .block-text {
       width: 36%; }
     .block.share .block-title {
-      font-size: 38px; } }
+      margin-right: 15px;
+      font-size: 38px; }
+    .block.share .block-text {
+      width: 88%; } }
   @media only screen and (max-width: 1023px) {
     .block-wrap {
       display: block;
@@ -552,7 +557,7 @@ body {
       padding: 40px 0 60px 0; }
     .block.intro .block-pic {
       width: 100%;
-      padding-bottom: 56%;
+      padding-bottom: 56.5%;
       margin-bottom: 35px; }
     .block.intro .block-text {
       width: 100%;
@@ -624,6 +629,8 @@ body {
     .block.event .block-pic .rectangle {
       left: -25px;
       width: 45px; }
+    .block.event .block-title p {
+      font-size: 15.7px; }
     .block.event .block-text {
       padding: 40px 20px; }
       .block.event .block-text .rectangle {
@@ -916,9 +923,12 @@ ul {
     display: flex;
     justify-content: center;
     margin-top: 4.8%; }
-    .swiper-info p {
+    .swiper-info .swiper-card-pagination {
+      width: auto;
       margin: 0 45px;
       font-size: 18px; }
+    .swiper-info .swiper-pagination-current {
+      opacity: 0.3; }
   .swiper-card-prev, .swiper-card-next, .swiper-popup-prev, .swiper-popup-next {
     position: static;
     width: 19px;
@@ -940,7 +950,7 @@ ul {
     padding: 0; }
   .swiper.card .swiper-slide {
     box-sizing: border-box;
-    padding: 0 0.8%; }
+    padding: 0 1.5%; }
     .swiper.card .swiper-slide:nth-of-type(even) {
       padding-top: 5.5%; }
   .swiper.pic .swiper-slide {
@@ -985,7 +995,7 @@ ul {
       padding-top: 0; }
     .swiper-info {
       margin-top: 30px; }
-      .swiper-info p {
+      .swiper-info .swiper-card-pagination {
         margin: 0 45px;
         font-size: 15px; }
     .swiper-popup-prev, .swiper-popup-next {
