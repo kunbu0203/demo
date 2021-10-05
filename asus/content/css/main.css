@@ -922,13 +922,8 @@ ul {
     flex: 0 0 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 4.8%; }
-    .swiper-info .swiper-card-pagination {
-      width: auto;
-      margin: 0 45px;
-      font-size: 18px; }
-    .swiper-info .swiper-pagination-current {
-      opacity: 0.3; }
   .swiper-card-prev, .swiper-card-next, .swiper-popup-prev, .swiper-popup-next {
     position: static;
     width: 19px;
@@ -945,6 +940,13 @@ ul {
   .swiper-card-prev, .swiper-popup-prev {
     transform: rotate(180deg); }
   .swiper-card-index, .swiper-popup-index {
+    opacity: 0.3; }
+  .swiper-info .swiper-popup-pagination,
+  .swiper-info .swiper-card-pagination {
+    width: auto;
+    margin: 0 45px;
+    font-size: 18px; }
+  .swiper-pagination-current {
     opacity: 0.3; }
   .swiper.card {
     padding: 0; }
@@ -995,12 +997,13 @@ ul {
       padding-top: 0; }
     .swiper-info {
       margin-top: 30px; }
-      .swiper-info .swiper-card-pagination {
-        margin: 0 45px;
-        font-size: 15px; }
     .swiper-popup-prev, .swiper-popup-next {
       width: 15px;
-      height: 23px; } }
+      height: 23px; }
+    .swiper-info .swiper-card-pagination,
+    .swiper-info .swiper-popup-pagination {
+      margin: 0 45px;
+      font-size: 15px; } }
 
 h1,
 h2,

@@ -62,6 +62,10 @@ $(function () {
   });
   var swiperPopup = new Swiper('[data-slider-popup]', {
     slidesPerView: 1,
+    pagination: {
+      el: '.swiper-popup-pagination',
+      type: 'fraction'
+    },
     navigation: {
       nextEl: '.swiper-popup-next',
       prevEl: '.swiper-popup-prev'
