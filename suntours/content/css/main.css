@@ -588,6 +588,9 @@ body {
     flex: 1;
     margin-left: 58px;
     padding: 3px 0; }
+  .topNews .swiper {
+    height: 36px;
+    overflow: hidden; }
   @media only screen and (max-width: 1023px) {
     .topNews {
       padding: 20px 0; }
@@ -597,7 +600,9 @@ body {
           width: 40px;
           height: 35px; }
       .topNews-content {
-        margin-left: 30px; } }
+        margin-left: 30px; }
+      .topNews .swiper {
+        height: 30px; } }
   @media only screen and (max-width: 767px) {
     .topNews {
       display: block;
@@ -609,7 +614,9 @@ body {
           height: 26px; }
       .topNews-content {
         margin-left: 0;
-        margin-top: 10px; } }
+        margin-top: 10px; }
+      .topNews .swiper {
+        height: 46px; } }
 
 .grid {
   display: flex; }
@@ -806,23 +813,41 @@ body {
       margin-top: 0; } }
 
 .news {
+  position: relative;
   display: flex;
+  justify-content: flex-start;
   text-decoration: none; }
   .news-date {
+    position: relative;
     flex: 0 0 auto;
     width: 115px;
     font-size: 23px;
-    color: #4b4b4b; }
+    color: #4b4b4b;
+    z-index: 1; }
   .news-title {
+    position: relative;
     flex: 1;
     margin-left: 45px;
     font-size: 24px;
     font-weight: 500;
-    color: #752e0b; }
+    color: #752e0b;
+    z-index: 1; }
   .topNews .news-date {
+    width: 100px;
     font-family: "DIN Alternate", "Noto Sans TC", sans-serif, Arial, "Microsoft JhengHei", Helvetica; }
   .topNews .news-title {
-    margin-left: 32px; }
+    margin-left: 32px;
+    display: -webkit-box;
+    max-height: 1.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+  .news:hover .news-title span {
+    background-image: url(./../images/text-bg.png);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: 0.65em; }
   @media only screen and (max-width: 1023px) {
     .news-date {
       width: 95px;
@@ -830,8 +855,10 @@ body {
     .news-title {
       margin-left: 35px;
       font-size: 20px; }
+    .topNews .news-date {
+      width: 85px; }
     .topNews .news-title {
-      margin-left: 15px; } }
+      margin-left: 10px; } }
   @media only screen and (max-width: 767px) {
     .news {
       display: block; }

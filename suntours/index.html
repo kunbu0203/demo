@@ -104,7 +104,7 @@
         <main class="main">
             
 <section class="banner">
-    <div class="swiper">
+    <div class="swiper" data-banner>
         <div class="swiper-wrapper">
             
             <div class="swiper-slide">
@@ -126,10 +126,33 @@
                 即將額滿
             </div>
             <div class="topNews-content">
-                <a href="#" class="news">
-                    <div class="news-date">2021.10.08</div>
-                    <div class="news-title">一生一定要去一次！瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</div>
-                </a>
+                <div class="swiper" data-top-news>
+                    <div class="swiper-wrapper">
+                        
+                        
+                        <div class="swiper-slide">
+                            <a href="#" class="news">
+                                <div class="news-date">2021.10.01</div>
+                                <div class="news-title">一生一定要去一次！瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</div>
+                            </a>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <a href="#" class="news">
+                                <div class="news-date">2021.10.02</div>
+                                <div class="news-title">無車小鎮策馬特連住三晚</div>
+                            </a>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <a href="#" class="news">
+                                <div class="news-date">2021.10.03</div>
+                                <div class="news-title">瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -323,35 +346,45 @@
                 <div class="newsList-item">
                     <a href="#" class="news">
                         <div class="news-date">2021.03.21</div>
-                        <div class="news-title">一生一定要去一次！瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</div>
+                        <div class="news-title">
+                            <span>一生一定要去一次！瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</span>
+                        </div>
                     </a>
                 </div>
                 
                 <div class="newsList-item">
                     <a href="#" class="news">
                         <div class="news-date">2021.03.22</div>
-                        <div class="news-title">無車小鎮策馬特連住三晚</div>
+                        <div class="news-title">
+                            <span>無車小鎮策馬特連住三晚</span>
+                        </div>
                     </a>
                 </div>
                 
                 <div class="newsList-item">
                     <a href="#" class="news">
                         <div class="news-date">2021.03.23</div>
-                        <div class="news-title">瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</div>
+                        <div class="news-title">
+                            <span>瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</span>
+                        </div>
                     </a>
                 </div>
                 
                 <div class="newsList-item">
                     <a href="#" class="news">
                         <div class="news-date">2021.03.24</div>
-                        <div class="news-title">一生一定要去一次！瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</div>
+                        <div class="news-title">
+                            <span>一生一定要去一次！瑞士名峰、美村山鎮、景觀鐵道驛站舒活旅10日遊</span>
+                        </div>
                     </a>
                 </div>
                 
                 <div class="newsList-item">
                     <a href="#" class="news">
                         <div class="news-date">2021.03.25</div>
-                        <div class="news-title">用鐵道探索瑞士-BOTA山城、無車小鎮策馬特連住三晚</div>
+                        <div class="news-title">
+                            <span>用鐵道探索瑞士-BOTA山城、無車小鎮策馬特連住三晚</span>
+                        </div>
                     </a>
                 </div>
                 
@@ -403,13 +436,13 @@
                         <div class="social-title">Follow us</div>
                         <div class="social-content">
                             <a href="#" class="social-item">
-                                <img src="/content/images/icon/social/fb.png" alt="">
+                                <img src="./content/images/icon/social/fb.png" alt="">
                             </a>
                             <a href="#" class="social-item">
-                                <img src="/content/images/icon/social/line.png" alt="">
+                                <img src="./content/images/icon/social/line.png" alt="">
                             </a>
                             <a href="#" class="social-item">
-                                <img src="/content/images/icon/social/messenger.png" alt="">
+                                <img src="./content/images/icon/social/messenger.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -436,12 +469,24 @@
 
 <script>
 $(function () {
-  var swiper = new Swiper('.swiper', {
+  var bannerSwiper = new Swiper('[data-banner]', {
     loop: true,
+    autoplay: {
+      delay: 3000
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
     }
+  });
+  var newsSwiper = new Swiper('[data-top-news]', {
+    loop: true,
+    direction: 'vertical',
+    slidesPerView: 1,
+    autoplay: {
+      delay: 3000
+    },
+    allowTouchMove: false
   });
 });
 </script>
