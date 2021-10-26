@@ -1,0 +1,14 @@
+{
+    "name": "瑞治旅行社股份有限公司",
+    "short_name": "瑞治旅行社",
+    "icons": [
+        {
+            "src": "content/images/touch/logo.png",
+            "type": "image/png",
+            "sizes": "500x500"
+        }
+    ],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#fafafa",
+    "theme_color": "#fafafa"
+}
