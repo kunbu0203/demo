@@ -1546,6 +1546,36 @@ article.content {
       .collapse-container p {
         margin-bottom: 20px; } }
 
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  margin-right: 10px;
+  padding-right: 15px;
+  background-image: url(./../images/icon/form/triangle.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .flatpickr-current-month .flatpickr-monthDropdown-months:focus {
+    background-image: url(./../images/icon/form/triangle.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #fff; }
+    .flatpickr-current-month .flatpickr-monthDropdown-months:focus::-ms-value {
+      color: #030303;
+      background-color: #fff; }
+  .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+    background-image: url(./../images/icon/form/triangle.png);
+    background-repeat: no-repeat;
+    background-position: right center; }
+  .flatpickr-current-month .flatpickr-monthDropdown-months::-ms-expand {
+    display: none; }
+
+.flatpickr-current-month input.cur-year {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
 .flatpickr-day.today:hover, .flatpickr-day.today:focus {
   color: #393939;
   background: #fef898;
@@ -1688,6 +1718,7 @@ article.content {
   width: 100%;
   line-height: 1.5;
   color: #030303;
+  border-radius: 0;
   border: 1px solid #686767;
   background-image: url(./../images/icon/form/triangle.png);
   background-repeat: no-repeat;
