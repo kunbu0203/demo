@@ -26,4 +26,118 @@
   if (ratio < 1) {
     viewport.setAttribute('content', 'width=device-width, initial-scale=' + ratio + ', minimum-scale=' + ratio + ', maximum-scale=' + ratio + ', user-scalable=yes');
   }
-})(360);
+})(360); // tab
+
+
+(function ($, undefined) {
+  'use strict';
+
+  var pluginName = 'tab';
+  var defaults = {};
+
+  function Plugin(element, options) {
+    this.element = element;
+    this.$element = $(element);
+    this.options = $.extend(true, {}, defaults, options, this.$element.data());
+    delete this.options[pluginName];
+    this._defaults = defaults;
+    this._name = pluginName;
+    this.init();
+    this.$element.data('plugin_' + pluginName, this);
+  }
+
+  $.extend(Plugin.prototype, {
+    init: function init() {
+      var $btn = this.$element.find('[data-tab-btn]'),
+          hrefId = location.hash;
+
+      if (hrefId) {
+        var $activeContent = $(hrefId),
+            $initCom = $activeContent.closest('[data-tab]'),
+            $initContent = $initCom.find('[data-tab-content]'),
+            $initBtn = $initCom.find('[data-tab-btn]'),
+            contentIndex = $initContent.index($activeContent);
+        $initContent.removeClass('active');
+        $activeContent.addClass('active');
+        $initBtn.removeClass('active');
+        $initBtn.eq(contentIndex).addClass('active');
+      }
+
+      $btn.off('click.tab').on('click.tab', function (e) {
+        e.preventDefault();
+        var $this = $(this),
+            btnIndex = $btn.index($this),
+            $content = $this.closest('[data-tab]').find('[data-tab-content]');
+        $btn.removeClass('active');
+        $this.addClass('active');
+        $content.removeClass('active');
+        $content.eq(btnIndex).addClass('active');
+      });
+    }
+  });
+
+  $.fn[pluginName] = function (methodOrOptions) {
+    return this.each(function () {
+      var plugin = $.data(this, 'plugin_' + pluginName) || new Plugin(this, methodOrOptions);
+
+      if (typeof methodOrOptions === 'string' && plugin[methodOrOptions]) {
+        plugin[methodOrOptions].apply(plugin, Array.prototype.slice.call(arguments, 1));
+      }
+    });
+  };
+
+  $('[data-tab]').tab();
+})(jQuery); // collapse
+
+
+(function ($, undefined) {
+  'use strict';
+
+  var pluginName = 'collapse';
+  var defaults = {};
+
+  function Plugin(element, options) {
+    this.element = element;
+    this.$element = $(element);
+    this.options = $.extend(true, {}, defaults, options, this.$element.data());
+    delete this.options[pluginName];
+    this._defaults = defaults;
+    this._name = pluginName;
+    this.init();
+    this.$element.data('plugin_' + pluginName, this);
+  }
+
+  $.extend(Plugin.prototype, {
+    init: function init() {
+      var $btn = this.$element.find('[data-collapse-btn]');
+      $($btn).on('click', function (e) {
+        e.preventDefault();
+        var $com = $(this).closest('[data-collapse]'),
+            $content = $com.find('[data-collapse-content]');
+
+        if (!$com.hasClass('active')) {
+          $content.attr('style', 'display:none;');
+          $com.addClass('active');
+          $content.slideDown();
+        } else {
+          $content.slideUp(function () {
+            $content.removeAttr('style');
+            $com.removeClass('active');
+          });
+        }
+      });
+    }
+  });
+
+  $.fn[pluginName] = function (methodOrOptions) {
+    return this.each(function () {
+      var plugin = $.data(this, 'plugin_' + pluginName) || new Plugin(this, methodOrOptions);
+
+      if (typeof methodOrOptions === 'string' && plugin[methodOrOptions]) {
+        plugin[methodOrOptions].apply(plugin, Array.prototype.slice.call(arguments, 1));
+      }
+    });
+  };
+
+  $('[data-collapse]').collapse();
+})(jQuery);
