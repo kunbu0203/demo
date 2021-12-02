@@ -72,31 +72,31 @@
                         
                         
                         <div class="nav-item active">
-                            <a href="./tour-list.html">出團列表</a>
+                            <a href="./tour-list.html" >出團列表</a>
                         </div>
                         
                         <div class="nav-item">
-                            <a href="./theme-tours.html">主題旅遊</a>
+                            <a href="./theme-tours.html" >主題旅遊</a>
                         </div>
                         
                         <div class="nav-item">
-                            <a href="./free-tours.html">鐵道自由行</a>
+                            <a href="./free-tours.html" >鐵道自由行</a>
                         </div>
                         
                         <div class="nav-item">
-                            <a href="#">瑞治崛起</a>
+                            <a href="#" data-popup-action>瑞治崛起</a>
                         </div>
                         
                         <div class="nav-item">
-                            <a href="#">旅遊講座</a>
+                            <a href="./meet.html" >旅遊講座</a>
                         </div>
                         
                         <div class="nav-item">
-                            <a href="#">最新消息</a>
+                            <a href="./news-list.html" >最新消息</a>
                         </div>
                         
                         <div class="nav-item">
-                            <a href="#">旅遊資訊</a>
+                            <a href="./info.html" >旅遊資訊</a>
                         </div>
                         
                     </div>
@@ -167,10 +167,14 @@
                 <div class="search-form">
                     <select class="selectBox sm" name="" id="">
                         <option value="不限">不限</option>
-                        <option value="熱列報名中">熱列報名中</option>
+                        <option value="確定成團">確定成團</option>
+                        <option value="報名截止">報名截止</option>
+                        <option value="熱列報名">熱列報名</option>
+                        <option value="暫滿候補">暫滿候補</option>
                         <option value="即將額滿">即將額滿</option>
-                        <option value="本團額滿">本團額滿</option>
-                        <option value="尚未開放">尚未開放</option>
+                        <option value="正常報名">正常報名</option>
+                        <option value="尚有２位">尚有２位</option>
+                        <option value="敬請期待">敬請期待</option>
                     </select>
                 </div>
             </div>
@@ -226,7 +230,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn check">
+                    <a href="./tour-apply.html" class="statusBtn check">
                         <span>確定成團</span>
                     </a>
                 </div>
@@ -262,7 +266,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn end">
+                    <a href="./tour-apply.html" class="statusBtn end">
                         <span>報名截止</span>
                     </a>
                 </div>
@@ -298,7 +302,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn hot">
+                    <a href="./tour-apply.html" class="statusBtn hot">
                         <span>熱列報名</span>
                     </a>
                 </div>
@@ -334,7 +338,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn standby">
+                    <a href="./tour-apply.html" class="statusBtn standby">
                         <span>暫滿候補</span>
                     </a>
                 </div>
@@ -370,7 +374,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn almost">
+                    <a href="./tour-apply.html" class="statusBtn almost">
                         <span>即將額滿</span>
                     </a>
                 </div>
@@ -406,7 +410,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn ">
+                    <a href="./tour-apply.html" class="statusBtn ">
                         <span>正常報名</span>
                     </a>
                 </div>
@@ -442,7 +446,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn ">
+                    <a href="./tour-apply.html" class="statusBtn ">
                         <span>尚有２位</span>
                     </a>
                 </div>
@@ -478,7 +482,7 @@
             <td class="status" data-title="報名狀態">
                 <div>
                     
-                    <a href="#" class="statusBtn coming">
+                    <a href="./tour-apply.html" class="statusBtn coming">
                         <span>敬請期待</span>
                     </a>
                 </div>
@@ -601,6 +605,18 @@
         <a href="#" data-gotop>
             <img src="./content/images/icon/top.svg" alt="">
         </a>
+    </div>
+    <div class="popup" data-popup>
+        <div class="popup-wrap">
+            <div class="popup-box">
+                <a href="#" class="close" data-popup-action>
+                    <div class="close-bar"></div>
+                    <div class="close-bar"></div>
+                </a>
+                <img src="./content/images/icon/setting.svg" alt="">
+                <p>內容建置中，敬請期待！</p>
+            </div>
+        </div>
     </div>
     
     <!-- Page plugin js / Begin -->

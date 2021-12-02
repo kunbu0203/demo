@@ -49,25 +49,23 @@
   $.extend(Plugin.prototype, {
     init: function init() {
       var $btn = this.$element.find('[data-tab-btn]'),
-          hrefId = location.hash;
+          $content = this.$element.find('[data-tab-content]'),
+          url = location.href;
 
-      if (hrefId) {
-        var $activeContent = $(hrefId),
-            $initCom = $activeContent.closest('[data-tab]'),
-            $initContent = $initCom.find('[data-tab-content]'),
-            $initBtn = $initCom.find('[data-tab-btn]'),
-            contentIndex = $initContent.index($activeContent);
-        $initContent.removeClass('active');
-        $activeContent.addClass('active');
-        $initBtn.removeClass('active');
-        $initBtn.eq(contentIndex).addClass('active');
+      if (url.indexOf('?') != -1) {
+        var arr = url.split('?'),
+            arrTab = arr[1].split('='),
+            initTab = Number(arrTab[1]) - 1;
+        $btn.removeClass('active');
+        $btn.eq(initTab).addClass('active');
+        $content.removeClass('active');
+        $content.eq(initTab).addClass('active');
       }
 
       $btn.off('click.tab').on('click.tab', function (e) {
         e.preventDefault();
         var $this = $(this),
-            btnIndex = $btn.index($this),
-            $content = $this.closest('[data-tab]').find('[data-tab-content]');
+            btnIndex = $btn.index($this);
         $btn.removeClass('active');
         $this.addClass('active');
         $content.removeClass('active');

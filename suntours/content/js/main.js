@@ -28,4 +28,8 @@ $(function () {
       scrollTop: 0
     }, 300);
   });
+  $('[data-popup-action]').on('click', function (e) {
+    e.preventDefault();
+    $('[data-popup]').fadeToggle();
+  });
 });
