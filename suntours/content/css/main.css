@@ -1894,7 +1894,8 @@ article.content {
       line-height: 33px; }
   .textBox.lg {
     height: 150px;
-    min-height: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     line-height: 1.5; }
     .textBox.lg.placeholder {
       color: #d2d0d0;
@@ -1980,7 +1981,10 @@ article.content {
       .textBox::-webkit-input-placeholder {
         line-height: 45px; }
       .textBox.sm {
-        width: 100%; } }
+        width: 100%; }
+      .textBox.lg {
+        padding-top: 10px;
+        padding-bottom: 10px; } }
 
 .selectBox {
   font-family: "Roboto", "Noto Sans TC", sans-serif, Arial, "Microsoft JhengHei", Helvetica;
