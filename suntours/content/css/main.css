@@ -269,9 +269,9 @@ body {
     border-radius: 1.5px;
     transition: .3s; }
     .burger-bar:first-of-type {
-      transform: translate(-50%, calc(-50% - 10px)); }
+      transform: translateX(-50%) translateY(-50%) translateY(-10px); }
     .burger-bar:last-of-type {
-      transform: translate(-50%, calc(-50% + 10px)); }
+      transform: translateX(-50%) translateY(-50%) translateY(10px); }
   .menuOpen .burger-bar:first-of-type {
     transform: translate(-50%, -50%) rotate(-45deg); }
   .menuOpen .burger-bar:nth-of-type(2) {
@@ -2014,7 +2014,8 @@ article.content {
   .selectBox::-ms-expand {
     display: none; }
   .selectBox:focus::-ms-value {
-    background-color: #fff; }
+    color: #030303;
+    background-color: transparent; }
   @media only screen and (max-width: 1299px) {
     .selectBox.sm {
       height: 31px; } }
@@ -2168,12 +2169,6 @@ article.content {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     z-index: 1; }
-  @media only screen and (min-width: 1024px) {
-    .newsList:hover .newsList-title span {
-      background-image: url(./../images/text-bg.png);
-      background-position: left bottom;
-      background-repeat: repeat-x;
-      background-size: 0.65em; } }
   @media only screen and (max-width: 1299px) {
     .newsList-date {
       width: 153px;
@@ -2207,7 +2202,7 @@ article.content {
     .iconInfo-icon img {
       width: 100%; }
   .iconInfo-text {
-    flex: 1;
+    flex: 1 1 auto;
     margin-left: 8px;
     font-size: 18px; }
     .iconInfo-text.map {
@@ -2462,7 +2457,7 @@ article.content {
       font-size: 20px;
       text-align: left; }
       .travelTable thead th.date, .travelTable thead th.status, .travelTable thead th.seminar {
-        min-width: 145px; }
+        min-width: 150px; }
       .travelTable thead th.airline, .travelTable thead th.price {
         min-width: 120px; }
       .travelTable thead th.seat {
