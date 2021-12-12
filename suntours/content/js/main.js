@@ -36,4 +36,8 @@ $(function () {
     e.preventDefault();
     $('#fb-root').trigger('click');
   });
+  $('#fb-root').on('click', function (e) {
+    e.preventDefault();
+    alert('fb click');
+  });
 });
