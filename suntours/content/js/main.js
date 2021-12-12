@@ -34,6 +34,6 @@ $(function () {
   });
   $('[data-messenger]').on('click', function (e) {
     e.preventDefault();
-    $('.fb-root').trigger('click');
+    $('#fb-root').trigger('click');
   });
 });
