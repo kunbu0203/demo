@@ -34,9 +34,9 @@ $(function () {
   });
   $('[data-messenger]').on('click', function (e) {
     e.preventDefault();
-    $('#fb-root').trigger('click');
+    $('.fb_reset').trigger('click');
   });
-  $('#fb-root').on('click', function (e) {
+  $('.fb_reset').on('click', function (e) {
     e.preventDefault();
     alert('fb click');
   });
