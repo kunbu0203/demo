@@ -46,6 +46,42 @@
 </head>
 
 <body>
+    <!-- Messenger 洽談外掛程式 Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your 洽談外掛程式 code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    
+<script>
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "101405172406919");
+chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+
+    <!-- Your SDK code -->
+    
+<script>
+window.fbAsyncInit = function () {
+  FB.init({
+    xfbml: true,
+    version: 'v12.0'
+  });
+};
+
+(function (d, s, id) {
+  var js,
+      fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, 'script', 'facebook-jssdk');
+</script>
+
     <div class="container">
         <header class="header" data-header>
             <div class="header-top">
@@ -73,7 +109,7 @@
                             <a href="./tour-list.html" >出團列表</a>
                         </div>
                         
-                        <div class="nav-item active">
+                        <div class="nav-item">
                             <a href="./theme-tours.html" >主題旅遊</a>
                         </div>
                         
@@ -98,12 +134,12 @@
                         </div>
                         
                     </div>
-                    <div class="social hidden">
+                    <div class="social">
                         <div class="social-content">
-                            <a href="#" class="social-item">
+                            <a href="https://www.facebook.com/suntours.ruichih/" class="social-item" target="_blank">
                                 <img src="./content/images/icon/social/fb.svg" alt="">
                             </a>
-                            <a href="#" class="social-item">
+                            <a href="https://line.me/ti/p/g81DWh5n-D" class="social-item" target="_blank">
                                 <img src="./content/images/icon/social/line.svg" alt="">
                             </a>
                             <a href="#" class="social-item">
@@ -157,7 +193,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent01.jpg" alt="">
     </div>
@@ -180,7 +216,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent02.jpg" alt="">
     </div>
@@ -203,7 +239,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent03.jpg" alt="">
     </div>
@@ -226,7 +262,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend01.jpg" alt="">
     </div>
@@ -249,7 +285,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend02.jpg" alt="">
     </div>
@@ -272,7 +308,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend03.jpg" alt="">
     </div>
@@ -295,7 +331,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news01.jpg" alt="">
     </div>
@@ -318,7 +354,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news02.jpg" alt="">
     </div>
@@ -341,7 +377,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news03.jpg" alt="">
     </div>
@@ -372,7 +408,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent01.jpg" alt="">
     </div>
@@ -395,7 +431,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent02.jpg" alt="">
     </div>
@@ -418,7 +454,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent03.jpg" alt="">
     </div>
@@ -441,7 +477,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend01.jpg" alt="">
     </div>
@@ -464,7 +500,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend02.jpg" alt="">
     </div>
@@ -487,7 +523,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend03.jpg" alt="">
     </div>
@@ -510,7 +546,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news01.jpg" alt="">
     </div>
@@ -533,7 +569,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news02.jpg" alt="">
     </div>
@@ -556,7 +592,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news03.jpg" alt="">
     </div>
@@ -587,7 +623,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent01.jpg" alt="">
     </div>
@@ -610,7 +646,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent02.jpg" alt="">
     </div>
@@ -633,7 +669,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent03.jpg" alt="">
     </div>
@@ -656,7 +692,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend01.jpg" alt="">
     </div>
@@ -679,7 +715,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend02.jpg" alt="">
     </div>
@@ -702,7 +738,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend03.jpg" alt="">
     </div>
@@ -725,7 +761,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news01.jpg" alt="">
     </div>
@@ -748,7 +784,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news02.jpg" alt="">
     </div>
@@ -771,7 +807,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news03.jpg" alt="">
     </div>
@@ -802,7 +838,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent01.jpg" alt="">
     </div>
@@ -825,7 +861,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent02.jpg" alt="">
     </div>
@@ -848,7 +884,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recent03.jpg" alt="">
     </div>
@@ -871,7 +907,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend01.jpg" alt="">
     </div>
@@ -894,7 +930,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend02.jpg" alt="">
     </div>
@@ -917,7 +953,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/recommend03.jpg" alt="">
     </div>
@@ -940,7 +976,7 @@
 
 
 
-<a href="./detail-free.html" class="card">
+<a href="./detail-free.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news01.jpg" alt="">
     </div>
@@ -963,7 +999,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news02.jpg" alt="">
     </div>
@@ -986,7 +1022,7 @@
 
 
 
-<a href="./detail.html" class="card">
+<a href="./detail.html" class="card free">
     <div class="card-pic">
         <img src="./content/images/card/news03.jpg" alt="">
     </div>
@@ -1022,14 +1058,14 @@
                             <img src="./content/images/logo/logo.png" alt="">
                         </a>
                     </div>
-                    <div class="footer-social hidden">
+                    <div class="footer-social">
                         <div class="social">
                             <div class="social-title">Follow us</div>
                             <div class="social-content">
-                                <a href="#" class="social-item">
+                                <a href="https://www.facebook.com/suntours.ruichih/" class="social-item" target="_blank">
                                     <img src="./content/images/icon/social/fb.svg" alt="">
                                 </a>
-                                <a href="#" class="social-item">
+                                <a href="https://line.me/ti/p/g81DWh5n-D" class="social-item" target="_blank">
                                     <img src="./content/images/icon/social/line.svg" alt="">
                                 </a>
                                 <a href="#" class="social-item">
@@ -1048,7 +1084,7 @@
                                     <div class="info-item">
                                         <span>代表人：黃鈞松</span>
                                         <span>交觀甲6370</span>
-                                        <span>品保編號：XXXX</span>
+                                        <span>品保編號：北2570</span>
                                     </div>
                                     <div class="info-item">104073 台北市中山區建國北路二段86號10樓</div>
                                     <div class="info-item">服務信箱：ruichih.rich@msa.hinet.net</div>
@@ -1071,16 +1107,16 @@
                     </div>
                     <div class="footer-link">
                         <div>
-                            <a href="#" class="link">最新消息</a>
+                            <a href="#" class="link" data-popup-action>關於瑞治</a>
+                        </div>
+                        <div>
+                            <a href="./info.html" class="link">旅遊資訊</a>
+                        </div>
+                        <div>
+                            <a href="./info.html" class="link">旅遊契約書</a>
                         </div>
                         <div>
                             <a href="#" class="link">隱私權政策</a>
-                        </div>
-                        <div>
-                            <a href="#" class="link">旅遊資訊</a>
-                        </div>
-                        <div>
-                            <a href="#" class="link">旅遊同意書</a>
                         </div>
                     </div>
                 </div>
@@ -1088,6 +1124,8 @@
             <div class="footer-bottom">Copyright © 2021 瑞治旅行社 版權所有</div>
         </footer>
     </div>
+    
+
     <div class="gotop">
         <a href="#" data-gotop>
             <img src="./content/images/icon/top.svg" alt="">
@@ -1115,6 +1153,8 @@
     <script src="./content/vendor/jquery-3.6.0.min.js"></script>
     <script src="./content/js/plugins.min.js"></script>
     <script src="./content/js/main.min.js"></script>
+    
+
     <!-- Global js / End -->
 
     <!-- Page js / Begin -->

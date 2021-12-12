@@ -607,53 +607,17 @@ body {
     .link {
       font-size: 18px; } }
 
-.statusBtn {
+.applyBtn {
   box-sizing: border-box;
   display: inline-block;
-  width: 130px;
-  padding: 2px 10px;
+  width: 100px;
+  padding: 2px;
   color: #fff;
   text-align: center;
   text-decoration: none;
-  background-color: #752e0b; }
-  .statusBtn span {
-    display: inline-block;
-    vertical-align: middle; }
-  .statusBtn::before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    background-image: url(./../images/icon/status-btn/pen.svg); }
-  .statusBtn.hot::before {
-    background-image: url(./../images/icon/status-btn/star.svg); }
-  .statusBtn.check {
-    background-color: #43bbe2; }
-    .statusBtn.check::before {
-      background-image: url(./../images/icon/status-btn/check.svg); }
-  .statusBtn.end {
-    background-color: #bab8b8;
-    pointer-events: none; }
-    .statusBtn.end::before {
-      background-image: url(./../images/icon/status-btn/cross.svg); }
-  .statusBtn.coming {
-    background-color: #bab8b8;
-    pointer-events: none; }
-    .statusBtn.coming::before {
-      background-image: url(./../images/icon/status-btn/bell.svg); }
-  .statusBtn.standby {
-    background-color: #875c5c; }
-    .statusBtn.standby::before {
-      background-image: url(./../images/icon/status-btn/hourglass.svg); }
-  .statusBtn.almost {
-    background-color: #ac1111; }
-    .statusBtn.almost::before {
-      background-image: url(./../images/icon/status-btn/almost.svg); }
-  .statusBtn.two {
-    background-color: #ac1111; }
-    .statusBtn.two::before {
-      background-image: url(./../images/icon/status-btn/stopwatch.svg); }
+  background-color: #ac1111; }
+  .statusInfo + .applyBtn {
+    margin-top: 10px; }
 
 .floatBtn {
   position: relative;
@@ -2475,8 +2439,6 @@ article.content {
       text-decoration: none; }
       .travelTable tbody td.name a:hover {
         text-decoration: underline; }
-  .travelTable tbody td.status {
-    padding: 12px 5px; }
   .travelTable.zebra tbody tr {
     border: none; }
     .travelTable.zebra tbody tr:nth-of-type(odd) {
@@ -2593,6 +2555,8 @@ p {
     font-family: 'Tinos', serif;
     letter-spacing: 2px;
     color: #decac0; }
+  .title.detail::after {
+    content: none; }
   .title.detail .title-ch {
     flex: 0 1 auto; }
     .title.detail .title-ch span {
@@ -2736,8 +2700,51 @@ p {
     .dateTag {
       margin-bottom: 10px; } }
 
-.textContentBlock img {
-  max-width: 100%; }
+.textContentBlock {
+  line-height: 1.75; }
+  .textContentBlock img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 32px 0; }
+
+.statusInfo {
+  box-sizing: border-box;
+  width: 100px;
+  color: #752e0b;
+  text-align: center; }
+  .statusInfo::before {
+    content: '';
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background-image: url(./../images/icon/status-btn/pen.svg); }
+  .statusInfo.hot::before {
+    background-image: url(./../images/icon/status-btn/star.svg); }
+  .statusInfo.check {
+    color: #43bbe2; }
+    .statusInfo.check::before {
+      background-image: url(./../images/icon/status-btn/check.svg); }
+  .statusInfo.end {
+    color: #bab8b8; }
+    .statusInfo.end::before {
+      background-image: url(./../images/icon/status-btn/cross.svg); }
+  .statusInfo.coming {
+    color: #bab8b8; }
+    .statusInfo.coming::before {
+      background-image: url(./../images/icon/status-btn/bell.svg); }
+  .statusInfo.standby {
+    color: #875c5c; }
+    .statusInfo.standby::before {
+      background-image: url(./../images/icon/status-btn/hourglass.svg); }
+  .statusInfo.almost {
+    color: #ac1111; }
+    .statusInfo.almost::before {
+      background-image: url(./../images/icon/status-btn/almost.svg); }
+  .statusInfo.two {
+    color: #ac1111; }
+    .statusInfo.two::before {
+      background-image: url(./../images/icon/status-btn/stopwatch.svg); }
 
 .hidden {
   display: none; }
