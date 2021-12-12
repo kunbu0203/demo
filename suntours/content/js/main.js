@@ -32,4 +32,8 @@ $(function () {
     e.preventDefault();
     $('[data-popup]').fadeToggle();
   });
+  $('[data-messenger]').on('click', function (e) {
+    e.preventDefault();
+    $('.fb-root').trigger('click');
+  });
 });
