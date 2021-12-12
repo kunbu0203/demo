@@ -34,9 +34,9 @@ $(function () {
   });
   $('[data-messenger]').on('click', function (e) {
     e.preventDefault();
-    $('.fb_reset').trigger('click');
+    $('.fb_reset iframe').trigger('click');
   });
-  $('.fb_reset').on('click', function (e) {
+  $('.fb_reset iframe').on('click', function (e) {
     e.preventDefault();
     alert('fb click');
   });
