@@ -34,10 +34,6 @@ $(function () {
   });
   $('[data-messenger]').on('click', function (e) {
     e.preventDefault();
-    $('[data-testid="bubble_iframe"]').trigger('click');
-  });
-  $('[data-testid="bubble_iframe"]').on('click', function (e) {
-    e.preventDefault();
-    alert('fb click');
+    FB.CustomerChat.showDialog();
   });
 });
