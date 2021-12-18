@@ -764,6 +764,8 @@ body {
       font-weight: normal; }
       .banner.detail .banner-title .ch::after {
         content: none; }
+  .banner.simple .banner-pic::after {
+    background-color: rgba(0, 0, 0, 0.5); }
   .banner .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 37px;
     line-height: 0; }
@@ -1578,6 +1580,144 @@ article.content {
       .infoCard-text span + span {
         margin-left: 0;
         margin-top: 5px; } }
+
+.introCard {
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px; }
+  .introCard-pic {
+    position: relative;
+    flex: 0 0 auto;
+    width: 550px; }
+    .introCard-pic img {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      z-index: 1;
+      box-shadow: 0px 0 15px 0 rgba(90, 90, 90, 0.5); }
+    .introCard-pic::before {
+      content: '';
+      position: absolute;
+      bottom: 50%;
+      left: -40px;
+      transform: translateY(50%);
+      display: block;
+      width: 100%;
+      height: calc(100% - 40px);
+      background-color: #fef898; }
+  .introCard-tag {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    padding: 5px 15px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(205, 18, 26, 0.65);
+    z-index: 1; }
+  .introCard-text {
+    flex: 1;
+    margin-left: 60px;
+    font-size: 22px;
+    line-height: 52px; }
+    .introCard-text span {
+      font-size: 30px; }
+  .introCard.left .introCard-pic {
+    padding-bottom: 40px; }
+    .introCard.left .introCard-pic::before {
+      bottom: 0;
+      left: 40px;
+      transform: none; }
+  .introCard.left .introCard-tag {
+    bottom: 70px; }
+  .introCard.left .introCard-text {
+    margin-left: 80px; }
+  .introCard.top {
+    display: block; }
+  .introCard.top .introCard-pic {
+    width: 100%; }
+    .introCard.top .introCard-pic img {
+      border: 6px solid #fff;
+      box-shadow: 0px 0 40px 0 rgba(90, 90, 90, 0.5); }
+    .introCard.top .introCard-pic::before {
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw; }
+  .introCard.top .introCard-tag {
+    left: 6px; }
+  .introCard.top .introCard-text {
+    margin-left: 0;
+    margin-top: 110px;
+    text-align: center; }
+    .introCard.top .introCard-text span {
+      color: #752e0b; }
+  @media only screen and (max-width: 1299px) {
+    .introCard {
+      padding-bottom: 30px; }
+      .introCard-pic {
+        width: 450px; }
+      .introCard-text {
+        font-size: 18px;
+        line-height: 46px; }
+        .introCard-text span {
+          font-size: 26px; }
+      .introCard.top .introCard-pic::before {
+        bottom: -40px; }
+      .introCard.top .introCard-text {
+        margin-top: 70px; } }
+  @media only screen and (max-width: 1023px) {
+    .introCard {
+      flex-direction: column; }
+      .introCard-pic {
+        order: 1;
+        width: 100%;
+        max-width: 500px;
+        margin: auto; }
+        .introCard-pic::before {
+          left: -20px;
+          height: calc(100% - 20px); }
+      .introCard-text {
+        flex: 0 0 auto;
+        order: 2;
+        line-height: 40px;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 30px; }
+      .introCard.left .introCard-pic {
+        padding-bottom: 20px; }
+        .introCard.left .introCard-pic::before {
+          left: 20px; }
+      .introCard.left .introCard-tag {
+        bottom: 50px; }
+      .introCard.left .introCard-text {
+        margin-left: 0; }
+      .introCard.top .introCard-pic {
+        max-width: none; }
+        .introCard.top .introCard-pic img {
+          border: 4px solid #fff; }
+        .introCard.top .introCard-pic::before {
+          bottom: -40px; }
+      .introCard.top .introCard-tag {
+        left: 4px; } }
+  @media only screen and (max-width: 767px) {
+    .introCard {
+      padding-bottom: 20px; }
+      .introCard-tag {
+        bottom: 10px;
+        padding: 3px 10px;
+        font-size: 14px; }
+      .introCard-text {
+        font-size: 16px;
+        line-height: 34px;
+        margin-top: 20px; }
+        .introCard-text span {
+          font-size: 24px; }
+      .introCard.left .introCard-tag {
+        bottom: 30px; }
+      .introCard.top .introCard-pic::before {
+        bottom: -20px; }
+      .introCard.top .introCard-text {
+        margin-top: 40px; } }
 
 .collapse {
   margin: 0;
@@ -2663,6 +2803,13 @@ p {
     line-height: 1.8;
     text-align: center;
     color: #4b4b4b; }
+  .introduction.about {
+    text-align: center; }
+    .introduction.about span {
+      margin-left: 0;
+      padding-left: 0;
+      font-size: 38px;
+      letter-spacing: 0; }
   @media only screen and (max-width: 1299px) {
     .introduction {
       font-size: 24px; }
@@ -2678,7 +2825,9 @@ p {
       .introduction span {
         font-size: 36px; }
       .introduction.meet {
-        font-size: 18px; } }
+        font-size: 18px; }
+      .introduction.about span {
+        font-size: 30px; } }
   @media only screen and (max-width: 767px) {
     .introduction {
       font-size: 16px; }
