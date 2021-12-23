@@ -1121,7 +1121,7 @@ article.content {
   box-sizing: border-box;
   padding: 0 60px; }
   .infoBlock + .infoBlock {
-    margin-top: 50px; }
+    margin-top: 60px; }
   .infoBlock-title {
     position: relative;
     margin-bottom: 35px;
@@ -1138,6 +1138,15 @@ article.content {
       width: 50px;
       height: 6px;
       background-color: #cd121a; }
+  .infoBlock-subTitle {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #752e0b; }
+  .infoBlock-content {
+    word-wrap: break-word; }
+    .infoBlock-content table {
+      margin: 10px 0; }
   @media only screen and (max-width: 1299px) {
     .infoBlock {
       padding: 0 30px; } }
@@ -2324,6 +2333,34 @@ article.content {
     .iconInfo-text {
       font-size: 15px; } }
 
+ol {
+  margin: 0; }
+  ol.brackets {
+    list-style-type: none; }
+    ol.brackets > li {
+      position: relative;
+      counter-increment: section; }
+      ol.brackets > li::before {
+        content: "(" counter(section, decimal) ")";
+        position: absolute;
+        top: 0;
+        left: -5px;
+        transform: translateX(-100%); }
+
+ul.dot {
+  list-style-type: disc; }
+
+ul.star {
+  list-style-type: none; }
+  ul.star > li {
+    position: relative; }
+    ul.star > li::before {
+      content: '＊';
+      position: absolute;
+      top: 0;
+      left: -5px;
+      transform: translateX(-100%); }
+
 .image {
   max-width: 100%; }
 
@@ -2586,11 +2623,24 @@ article.content {
       background-color: #f0f0f0; }
     .travelTable.zebra tbody tr:last-child {
       border-bottom: 1px solid #a6a6a6; }
+  .travelTable.info {
+    color: #030303;
+    border: 1px solid #a6a6a6; }
+    .travelTable.info thead {
+      color: inherit;
+      background-color: #f0f0f0; }
+    .travelTable.info td,
+    .travelTable.info th {
+      border-right: 1px solid #a6a6a6; }
+    .travelTable.info th {
+      font-size: inherit; }
   @media only screen and (min-width: 1024px) {
     .travelTable tbody tr:hover {
       background-color: #fdfbda; }
     .travelTable.zebra tbody tr:hover {
-      background-color: #fdfbda; } }
+      background-color: #fdfbda; }
+    .travelTable.info tbody tr:hover {
+      background-color: #fff; } }
   @media only screen and (max-width: 1299px) {
     .travelTable thead th {
       padding: 10px 5px;
@@ -2634,7 +2684,31 @@ article.content {
     .travelTable.zebra tbody tr {
       border: 1px solid #a6a6a6; }
       .travelTable.zebra tbody tr:nth-of-type(odd) {
-        background-color: #fff; } }
+        background-color: #fff; }
+    .travelTable.info {
+      border: none; }
+      .travelTable.info td,
+      .travelTable.info th {
+        border-right: none; } }
+
+.verTable {
+  width: 100%;
+  border: 1px solid #a6a6a6;
+  background-color: #fff;
+  border-collapse: collapse; }
+  .verTable tr:nth-of-type(odd) {
+    background-color: #f0f0f0; }
+  .verTable tr + tr {
+    border-top: 1px solid #a6a6a6; }
+  .verTable th,
+  .verTable td {
+    box-sizing: border-box;
+    padding: 5px;
+    word-wrap: break-word; }
+  .verTable th {
+    width: 30%; }
+  .verTable td {
+    border-left: 1px solid #a6a6a6; }
 
 h1,
 h2,
