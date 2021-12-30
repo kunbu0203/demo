@@ -2335,6 +2335,28 @@ article.content {
 
 ol {
   margin: 0; }
+  ol.chinese {
+    list-style-type: none;
+    padding-left: 35px; }
+    ol.chinese > li {
+      position: relative; }
+      ol.chinese > li::before {
+        content: attr(data-num) "、";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%); }
+  ol.bracketsChinese {
+    list-style-type: none;
+    padding-left: 35px; }
+    ol.bracketsChinese > li {
+      position: relative; }
+      ol.bracketsChinese > li::before {
+        content: "(" attr(data-num) ")";
+        position: absolute;
+        top: 0;
+        left: -5px;
+        transform: translateX(-100%); }
   ol.brackets {
     list-style-type: none; }
     ol.brackets > li {
@@ -2360,6 +2382,30 @@ ul.star {
       top: 0;
       left: -5px;
       transform: translateX(-100%); }
+
+ul.none {
+  margin: 0;
+  list-style-type: none; }
+
+.contract {
+  box-sizing: border-box;
+  padding: 0 60px; }
+  .contract-head {
+    font-size: 28px;
+    text-align: center; }
+  .contract-title {
+    margin-top: 10px; }
+  .contract-content {
+    padding-left: 10px; }
+  @media only screen and (max-width: 1299px) {
+    .contract {
+      padding: 0 30px; } }
+  @media only screen and (max-width: 1023px) {
+    .contract-head {
+      font-size: 26px; } }
+  @media only screen and (max-width: 767px) {
+    .contract {
+      padding: 0; } }
 
 .image {
   max-width: 100%; }
@@ -2724,6 +2770,9 @@ p {
 
 .bold {
   font-weight: bold; }
+
+.right {
+  text-align: right; }
 
 .title {
   display: flex;
