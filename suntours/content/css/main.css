@@ -712,7 +712,7 @@ body {
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.75); }
+      background-color: rgba(0, 0, 0, 0.5); }
   .banner-wrap {
     box-sizing: border-box;
     max-width: 1200px;
@@ -730,7 +730,8 @@ body {
   .banner-title {
     display: inline-block;
     line-height: 1.1;
-    color: #fff; }
+    color: #fff;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); }
     .banner-title .ch {
       display: flex;
       align-items: center;
