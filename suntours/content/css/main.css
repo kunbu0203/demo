@@ -2934,6 +2934,13 @@ p {
       padding-left: 0;
       font-size: 38px;
       letter-spacing: 0; }
+  .introduction.free {
+    margin-bottom: 0;
+    margin-top: 80px; }
+  .introduction.aboutTitle {
+    margin-bottom: 10px;
+    font-size: 38px;
+    text-align: center; }
   @media only screen and (max-width: 1299px) {
     .introduction {
       font-size: 24px; }
