@@ -1659,6 +1659,8 @@ article.content {
     margin-left: 0;
     margin-top: 110px;
     text-align: center; }
+    .introCard.top .introCard-text:first-child {
+      margin-top: 0; }
     .introCard.top .introCard-text span {
       color: #752e0b; }
   @media only screen and (max-width: 1299px) {
@@ -2928,6 +2930,7 @@ p {
     text-align: center;
     color: #4b4b4b; }
   .introduction.about {
+    margin-bottom: 20px;
     text-align: center; }
     .introduction.about span {
       margin-left: 0;
