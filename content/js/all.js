@@ -111,6 +111,7 @@ $(function () {
     "_sign": sign
   };
   fetch(url, {
+    mode: "no-cors",
     method: "POST",
     headers: headers,
     body: JSON.stringify(body)
