@@ -107,8 +107,7 @@ body {
     background-image: url(../images/icon/menu.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-    transition: background-image .4s; }
+    background-position: center; }
   .header.open .header-burger {
     background-image: url(../images/icon/cross.svg); }
   @media only screen and (max-width: 1439px) {
