@@ -616,7 +616,12 @@
 .tranBanner {
   position: relative;
   height: 490px;
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: url(../images/banner/transition.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
   .tranBanner-wrap {
     position: absolute;
     top: 50%;
