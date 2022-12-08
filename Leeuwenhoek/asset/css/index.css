@@ -641,7 +641,7 @@
         width: 1024px; } }
   @media only screen and (max-width: 767px) {
     .tranBanner {
-      height: 160px; }
+      background-attachment: unset; }
       .tranBanner img {
         width: 768px; } }
 
