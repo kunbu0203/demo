@@ -34,9 +34,34 @@
     
 
     <meta name="theme-color" content="#fafafa">
+
+    <!-- Google Tag Manager -->
+    
+<script>
+(function (w, d, s, l, i) {
+  w[l] = w[l] || [];
+  w[l].push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js'
+  });
+  var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+  j.async = true;
+  j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+  f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-KSBK8R5');
+</script>
+
+    <!-- End Google Tag Manager -->
+
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSBK8R5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!--[if lte IE 11]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif]-->
     <main class="main -index">
         
@@ -67,7 +92,7 @@
                         期待透過這片稻田藝術呼籲大家一同守護台灣黑熊
                     </div>
                     <div class="video-main -fadeIn">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_6TtTRrno3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/EBu5t07N2_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -76,7 +101,31 @@
             <div class="block-wrap">
                 <div class="intro">
                     <div class="intro-pic -fadeIn">
-                        <img src="./asset/images/other/bearLand.png" alt="">
+                        <div class="intro-slider" data-slider="intro">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="intro-item swiper-slide">
+                                    <img src="./asset/images/other/bearLand-1.png" alt="">
+                                </div>
+                                
+                                <div class="intro-item swiper-slide">
+                                    <img src="./asset/images/other/bearLand-2.png" alt="">
+                                </div>
+                                
+                                <div class="intro-item swiper-slide">
+                                    <img src="./asset/images/other/bearLand-3.png" alt="">
+                                </div>
+                                
+                                <div class="intro-item swiper-slide">
+                                    <img src="./asset/images/other/bearLand-4.png" alt="">
+                                </div>
+                                
+                                <div class="intro-item swiper-slide">
+                                    <img src="./asset/images/other/bearLand-5.png" alt="">
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                     <div class="intro-content -fadeIn">
                         <div class="intro-title"><span>我們將善的繼續傳遞下去</span></div>
@@ -91,7 +140,7 @@
                 </div>
             </div>
         </section>
-        <section class="block -join">
+        <section class="block -join" id="join">
             <div class="block-wrap">
                 <div class="join">
                     <div class="join-title -fadeIn"><span>與 ŠKODA 一起持續支持黑熊保育行動</span></div>
@@ -226,7 +275,7 @@
             </div>
         </div>
     </section>
-    <section class="block">
+    <section class="block -reserve">
         <div class="block-wrap">
             <div class="reserve -fadeIn">
                 <div class="reserve-subTitle">入主趁現在 聰明的就懂</div>
@@ -267,12 +316,23 @@
 
     </main>
     <footer class="footer">© 2022 Škoda Taiwan</footer>
-
+    <div class="floatTool">
+        <div class="floatTool-text">分享</div>
+        <a href="#" class="floatTool-item">
+            <img src="./asset/images/icon/fb-gy.png" alt="">
+        </a>
+        <a href="#" class="floatTool-item">
+            <img src="./asset/images/icon/line-gy.png" alt="">
+        </a>
+        <a href="#" class="floatTool-item" data-top>
+            <img src="./asset/images/icon/top-gy.png" alt="">
+        </a>
+    </div>
     
 
 
 
-<div class="popup" data-popup="event01">
+<div class="popup -detail" data-popup="event01">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
@@ -329,7 +389,7 @@
 </div>
 
 
-<div class="popup" data-popup="event02">
+<div class="popup -detail" data-popup="event02">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
@@ -384,7 +444,7 @@
 </div>
 
 
-<div class="popup" data-popup="event03">
+<div class="popup -detail" data-popup="event03">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
@@ -441,7 +501,7 @@
 </div>
 
 
-<div class="popup" data-popup="event04">
+<div class="popup -detail" data-popup="event04">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
@@ -494,7 +554,7 @@
 </div>
 
 
-<div class="popup" data-popup="event05">
+<div class="popup -detail" data-popup="event05">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
@@ -551,7 +611,7 @@
 </div>
 
 
-<div class="popup" data-popup="event06">
+<div class="popup -detail" data-popup="event06">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
@@ -608,7 +668,7 @@
 </div>
 
 
-<div class="popup" data-popup="event07">
+<div class="popup -detail" data-popup="event07">
     <div class="popup-wrap">
         <div class="popup-box">
             <a href="#" class="popup-close" data-popup-close></a>
