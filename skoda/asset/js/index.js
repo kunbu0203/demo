@@ -1,10 +1,40 @@
-$(function () {
-  // $(window).on('resize', function () {
-  // }).trigger('resize');
+window.onload = function () {
   var svgH = $('.container').height() - $(window).height() / 2;
   $('svg').css('height', svgH);
-  $('.path-road').css('max-height', svgH); // 進場
+  $('.path-road').css('max-height', svgH); // road
 
+  gsap.from('.path-road', {
+    height: 0,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.path',
+      start: 'top center',
+      end: '90% center',
+      scrub: true // markers: true
+
+    }
+  });
+  gsap.registerPlugin(MotionPathPlugin);
+  gsap.to('.path-car', {
+    ease: 'none',
+    motionPath: {
+      path: '#road',
+      align: '#road',
+      autoRotate: false,
+      alignOrigin: [0.5, 0.5]
+    },
+    scrollTrigger: {
+      trigger: '.path',
+      start: 'top center',
+      end: '90% center',
+      scrub: true // markers: true
+
+    }
+  });
+};
+
+$(function () {
+  // 進場
   gsap.registerPlugin(ScrollTrigger); // banner
 
   gsap.set('.banner-title span', {
@@ -125,35 +155,6 @@ $(function () {
     scrollTrigger: {
       trigger: '.reserve',
       start: 'top 70%'
-    }
-  }); // road
-
-  gsap.from('.path-road', {
-    height: 0,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '.path',
-      start: 'top center',
-      end: '90% center',
-      scrub: true // markers: true
-
-    }
-  });
-  gsap.registerPlugin(MotionPathPlugin);
-  gsap.to('.path-car', {
-    ease: 'none',
-    motionPath: {
-      path: '#road',
-      align: '#road',
-      autoRotate: false,
-      alignOrigin: [0.5, 0.5]
-    },
-    scrollTrigger: {
-      trigger: '.path',
-      start: 'top center',
-      end: '90% center',
-      scrub: true // markers: true
-
     }
   });
   var eventSwiper = new Swiper('[data-slider="event"]', {
