@@ -260,6 +260,48 @@ body {
       padding: 5px;
       font-size: 12px; } }
 
+.floatTool {
+  position: fixed;
+  bottom: 7%;
+  right: 50px;
+  width: 64px; }
+  .floatTool-text {
+    margin-bottom: 12px;
+    font-size: 17px;
+    color: #a1a1a1;
+    text-align: center; }
+  .floatTool-item {
+    display: block;
+    text-decoration: none; }
+    .floatTool-item img {
+      width: 100%; }
+    .floatTool-item + .floatTool-item {
+      margin-top: 14px; }
+    .floatTool-item:hover {
+      opacity: 0.7; }
+  @media only screen and (max-width: 1439px) {
+    .floatTool {
+      right: 30px;
+      width: 50px; }
+      .floatTool-text {
+        margin-bottom: 8px;
+        font-size: 14px; }
+      .floatTool-item + .floatTool-item {
+        margin-top: 10px; } }
+  @media only screen and (max-width: 1023px) {
+    .floatTool {
+      right: 15px;
+      width: 35px; }
+      .floatTool-text {
+        margin-bottom: 5px;
+        font-size: 12px; }
+      .floatTool-item + .floatTool-item {
+        margin-top: 7px; } }
+  @media only screen and (max-width: 767px) {
+    .floatTool {
+      right: 10px;
+      width: 33px; } }
+
 .banner {
   position: relative;
   overflow: hidden;
@@ -404,8 +446,8 @@ body {
         padding-bottom: 60px; } }
   .block.-carModel {
     background-color: #e2e1e0; }
-  .block.-carModel {
-    background-color: #e2e1e0; }
+  .block.-reserve {
+    background-color: #fff; }
 
 .video {
   max-width: 50vw;
@@ -533,7 +575,8 @@ body {
   align-items: center;
   background: url(../images/background/farmland.png) no-repeat center/contain; }
   .intro-pic {
-    flex: 0 0 53%; }
+    flex: 0 0 53%;
+    overflow: hidden; }
     .intro-pic img {
       width: 100%; }
   .intro-content {
@@ -1813,6 +1856,8 @@ body {
     background: #fff url(../images/background/moutain.png) no-repeat bottom center/100%; }
   .popup.-success .popup-content {
     padding: 0; }
+  .popup.-detail .popup-box {
+    background: #fff url(../images/background/bear.png) no-repeat bottom center/100%; }
   @media only screen and (max-width: 767px) {
     .popup-box {
       width: 100%; } }

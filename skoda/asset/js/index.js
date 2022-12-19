@@ -1,5 +1,9 @@
 $(function () {
-  $('svg').css('height', $('.container').height()); // 進場
+  // $(window).on('resize', function () {
+  // }).trigger('resize');
+  var svgH = $('.container').height() - $(window).height() / 2;
+  $('svg').css('height', svgH);
+  $('.path-road').css('max-height', svgH); // 進場
 
   gsap.registerPlugin(ScrollTrigger); // banner
 
@@ -130,7 +134,7 @@ $(function () {
     scrollTrigger: {
       trigger: '.path',
       start: 'top center',
-      end: 'bottom 90%',
+      end: '90% center',
       scrub: true // markers: true
 
     }
@@ -147,7 +151,7 @@ $(function () {
     scrollTrigger: {
       trigger: '.path',
       start: 'top center',
-      end: 'bottom 90%',
+      end: '90% center',
       scrub: true // markers: true
 
     }
@@ -179,10 +183,28 @@ $(function () {
       prevEl: '.swiper-button-prev'
     }
   });
+  var introSwiper = new Swiper('[data-slider="intro"]', {
+    slidesPerView: 1,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    }
+  });
   $('[data-popup-open]').on('click', function (e) {
     e.preventDefault();
     var id = $(this).data('popup-open');
     $('body').addClass('-popupOpen');
     $('[data-popup="' + id + '"]').addClass('-open');
+  }); // goTop鈕
+
+  $('[data-top]').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
   });
 });
