@@ -272,13 +272,14 @@ body {
     text-align: center; }
   .floatTool-item {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    opacity: 0.6; }
     .floatTool-item img {
       width: 100%; }
     .floatTool-item + .floatTool-item {
       margin-top: 14px; }
     .floatTool-item:hover {
-      opacity: 0.7; }
+      opacity: 1; }
   @media only screen and (max-width: 1439px) {
     .floatTool {
       right: 30px;
