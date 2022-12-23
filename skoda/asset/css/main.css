@@ -303,6 +303,27 @@ body {
       right: 10px;
       width: 33px; } }
 
+.uploadFloat {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .uploadFloat {
+      position: fixed;
+      top: 20%;
+      right: 0;
+      display: block; }
+      .uploadFloat a {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 37px;
+        padding: 10px;
+        line-height: 1.2;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px 0 0 5px;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+        background-color: rgba(71, 160, 53, 0.8); } }
+
 .banner {
   position: relative;
   overflow: hidden;
@@ -333,7 +354,7 @@ body {
     .banner-title .-en {
       margin-right: 1.3vw;
       font-size: 5.98958vw;
-      color: #fff; }
+      color: #47a035; }
       @media only screen and (max-width: 1279px) {
         .banner-title .-en {
           font-size: 7.48698vw; } }
@@ -926,7 +947,7 @@ body {
         padding-bottom: 9px; } }
     @media only screen and (max-width: 1279px) {
       .event-list {
-        padding-left: 1.95313vw; } }
+        padding-left: 1.95312vw; } }
     @media only screen and (max-width: 1023px) {
       .event-list {
         padding-left: 2.42188vw; } }
@@ -935,7 +956,7 @@ body {
         padding-left: 18px; } }
     @media only screen and (max-width: 1279px) {
       .event-list {
-        padding-right: 1.95313vw; } }
+        padding-right: 1.95312vw; } }
     @media only screen and (max-width: 1023px) {
       .event-list {
         padding-right: 2.42188vw; } }
@@ -1285,7 +1306,7 @@ body {
         margin-left: 1.5625vw; }
         @media only screen and (max-width: 1279px) {
           .reserve-social a + a {
-            margin-left: 1.95313vw; } }
+            margin-left: 1.95312vw; } }
         @media only screen and (max-width: 1023px) {
           .reserve-social a + a {
             margin-left: 2.42188vw; } }
@@ -1386,7 +1407,7 @@ body {
     box-shadow: 5px 9px 9px 1px #bdc189; }
     @media only screen and (max-width: 1279px) {
       .eventCard-pic {
-        border-width: 0.39063vw; } }
+        border-width: 0.39062vw; } }
     @media only screen and (max-width: 1023px) {
       .eventCard-pic {
         border-width: 0.48438vw; } }
@@ -1429,7 +1450,7 @@ body {
     transition: .3s; }
     @media only screen and (max-width: 1279px) {
       .eventCard-title {
-        margin-top: -0.39063vw; } }
+        margin-top: -0.39062vw; } }
     @media only screen and (max-width: 1023px) {
       .eventCard-title {
         margin-top: -0.48438vw; } }
@@ -1474,7 +1495,7 @@ body {
         font-size: 15.6px; } }
     @media only screen and (max-width: 1279px) {
       .eventCard-title {
-        border-width: 0.39063vw; } }
+        border-width: 0.39062vw; } }
     @media only screen and (max-width: 1023px) {
       .eventCard-title {
         border-width: 0.48438vw; } }

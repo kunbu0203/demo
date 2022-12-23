@@ -25,6 +25,7 @@ $(function () {
     e.preventDefault();
     $('body').addClass('-popupOpen');
     $('[data-popup="form"]').addClass('-open');
+    $('[data-header]').removeClass('-open');
   }); // ------------------------- 成功狀態示意，需更換正確程式碼 ------------------------
 
   $('[data-submit]').on('click', function (e) {
