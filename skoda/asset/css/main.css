@@ -1668,10 +1668,6 @@ body {
         margin-bottom: 15px; }
       .form-item + .form-item {
         margin-top: 15px; }
-      .form-name {
-        font-size: 15px; }
-      .form-value input {
-        font-size: 15px; }
       .form .checkbox span {
         font-size: 14px; }
       .form-btn {
