@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16.31" height="38.37" viewBox="0 0 16.31 38.37"><path id="形狀_1" data-name="形狀 1" d="M1340 3422.89v5.75l13.43 13.42-13.43 13.43v5.75l16.3-16.3v-5.75z" transform="translate(-1340 -3422.88)" fill="#32bb6a" fill-rule="evenodd"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16.31" height="38.37" viewBox="0 0 16.31 38.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #32bb6a;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="形狀_1" data-name="形狀 1" class="cls-1" d="M1340,3422.89v5.75l13.43,13.42L1340,3455.49v5.75l16.3-16.3v-5.75Z" transform="translate(-1340 -3422.88)"/>
+</svg>

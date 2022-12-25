@@ -9,6 +9,28 @@ a,
 button {
   outline: none; }
 
+[data-fade],
+[data-fade-up],
+[data-fade-left],
+[data-fade-right],
+[data-fade-zoom] {
+  opacity: 0; }
+
+.anchor {
+  transform: translateY(-130px); }
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 200% 0; } }
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 200% 0; } }
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -104,12 +126,12 @@ body {
     display: none;
     width: 30px;
     height: 30px;
-    background-image: url(../images/icon/menu.svg);
+    background-image: url(../images/icon/btn/menu.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center; }
   .header.open .header-burger {
-    background-image: url(../images/icon/cross.svg); }
+    background-image: url(../images/icon/btn/cross.svg); }
   @media only screen and (max-width: 1439px) {
     .header {
       height: 68px;
@@ -153,6 +175,8 @@ body {
       border-left: 1px solid #8b8b8b; }
     .nav-item:hover {
       color: #0091b1; }
+    .nav-item.-active {
+      color: #72cc80; }
   @media only screen and (max-width: 1439px) {
     .nav-item {
       padding: 3px 30px;
@@ -309,7 +333,8 @@ body {
   display: flex;
   align-items: center;
   min-height: calc(100% - 82px);
-  background-image: url(./../images/bg/coming-light.png);
+  padding-top: 0;
+  background-image: url(./../images/bg/light/coming.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 20%;
@@ -362,18 +387,6 @@ body {
     transform: rotate(-8deg); }
   100% {
     transform: rotate(8deg); } }
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 200% 0; } }
-
-@keyframes gradient {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 200% 0; } }
 
 .comingMsg-pic {
   transform: rotate(-8deg);

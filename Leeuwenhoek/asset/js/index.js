@@ -1,6 +1,6 @@
 $(function () {
   // 進場
-  gsap.registerPlugin(ScrollTrigger); // gsap.from('[data-fade]', {
+  // gsap.from('[data-fade]', {
   //     duration: 0.7,
   //     y: -40,
   //     rotate: -10,
@@ -14,11 +14,11 @@ $(function () {
   //         end: 'bottom top',
   //     }
   // });
-
-  gsap.from('[data-fade="banner"]', {
+  gsap.to('[data-fade="banner"]', {
     duration: 0.6,
-    y: -50,
-    opacity: 0,
+    delay: 0.3,
+    y: 0,
+    opacity: 1,
     stagger: 0.5,
     scrollTrigger: {
       trigger: '.banner',
@@ -26,15 +26,15 @@ $(function () {
     }
   });
   var introEntry = gsap.timeline();
-  introEntry.from('[data-fade-left="intro"]', {
+  introEntry.to('[data-fade-left="intro"]', {
     duration: 0.6,
-    x: -50,
-    opacity: 0
-  }).from('[data-fade-zoom="intro"]', {
+    x: 0,
+    opacity: 1
+  }).to('[data-fade-zoom="intro"]', {
     duration: 0.6,
     delay: -0.3,
-    opacity: 0,
-    scale: 0.5,
+    opacity: 1,
+    scale: 1,
     stagger: 0.5,
     ease: 'back.out(1.7)'
   });
@@ -44,26 +44,26 @@ $(function () {
     start: 'top 70%'
   });
   var totalEntry = gsap.timeline();
-  totalEntry.from('[data-fade-left="total"]', {
+  totalEntry.to('[data-fade-left="total"]', {
     duration: 0.6,
-    x: -50,
-    opacity: 0
-  }).from('[data-fade-right="total"]', {
+    x: 0,
+    opacity: 1
+  }).to('[data-fade-right="total"]', {
     duration: 0.6,
     delay: -0.6,
-    x: 50,
-    opacity: 0
+    x: 0,
+    opacity: 1
   });
   ScrollTrigger.create({
     animation: totalEntry,
     trigger: '.total-content',
     start: 'top 70%'
   });
-  gsap.from('[data-fade-zoom="total"]', {
+  gsap.to('[data-fade-zoom="total"]', {
     duration: 0.6,
     delay: -0.4,
-    opacity: 0,
-    scale: 0.5,
+    opacity: 1,
+    scale: 1,
     stagger: 0.5,
     ease: 'back.out(1.7)',
     scrollTrigger: {
@@ -87,40 +87,42 @@ $(function () {
       }
     });
   });
-  gsap.from('[data-fade-left="step"]', {
+  gsap.to('[data-fade-left="step"]', {
     duration: 0.6,
-    x: -50,
-    opacity: 0,
+    x: 0,
+    opacity: 1,
     stagger: 0.3,
     scrollTrigger: {
       trigger: '.step-content',
       start: 'top 70%'
     }
   }); // banner滾動視差
+  // var floatTop = gsap.timeline({
+  //     defaults: {
+  //         ease: 'none'
+  //     }
+  // });
+  // floatTop
+  //     .from('[data-float="top"]', {
+  //         y: 200,
+  //         duration: 1,
+  //     })
+  //     .to('[data-float="top"]', {
+  //         y: -200,
+  //         duration: 1,
+  //     });
+  // ScrollTrigger.create({
+  //     animation: floatTop,
+  //     trigger: '.tranBanner',
+  //     start: 'top bottom',
+  //     end: 'bottom top',
+  //     scrub: true
+  // });
 
-  var floatTop = gsap.timeline({
-    defaults: {
-      ease: 'none'
-    }
-  });
-  floatTop.from('[data-float="top"]', {
-    y: 200,
-    duration: 1
-  }).to('[data-float="top"]', {
-    y: -200,
-    duration: 1
-  });
-  ScrollTrigger.create({
-    animation: floatTop,
-    trigger: '.tranBanner',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true
-  });
-  gsap.from('[data-fade="article"]', {
+  gsap.to('[data-fade="article"]', {
     duration: 0.6,
-    y: -50,
-    opacity: 0,
+    y: 0,
+    opacity: 1,
     scrollTrigger: {
       trigger: '.article-content',
       start: 'top 70%'
