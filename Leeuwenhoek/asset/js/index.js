@@ -1,19 +1,10 @@
 $(function () {
-  // 進場
-  // gsap.from('[data-fade]', {
-  //     duration: 0.7,
-  //     y: -40,
-  //     rotate: -10,
-  //     opacity: 0,
-  //     transformOrigin: 'left bottom',
-  //     stagger: 0.3,
-  //     scrollTrigger: {
-  //         trigger: '.banner',
-  //         markers: true,
-  //         start: 'top bottom',
-  //         end: 'bottom top',
-  //     }
-  // });
+  // banner
+  if (isMobile()) {
+    $('.banner').addClass('-touch');
+  }
+
+  ;
   gsap.to('[data-fade="banner"]', {
     duration: 0.6,
     delay: 0.3,
@@ -24,7 +15,8 @@ $(function () {
       trigger: '.banner',
       start: 'top bottom'
     }
-  });
+  }); // 重新發現微生物
+
   var introEntry = gsap.timeline();
   introEntry.to('[data-fade-left="intro"]', {
     duration: 0.6,
@@ -42,7 +34,8 @@ $(function () {
     animation: introEntry,
     trigger: '.intro-content',
     start: 'top 70%'
-  });
+  }); // 創新思維 專業技術
+
   var totalEntry = gsap.timeline();
   totalEntry.to('[data-fade-left="total"]', {
     duration: 0.6,
@@ -70,7 +63,8 @@ $(function () {
       trigger: '.total-number',
       start: 'top 80%'
     }
-  });
+  }); // 數字
+
   var counter = {
     num: 0
   };
@@ -86,7 +80,8 @@ $(function () {
         start: 'top 80%'
       }
     });
-  });
+  }); // 服務流程
+
   gsap.to('[data-fade-left="step"]', {
     duration: 0.6,
     x: 0,
@@ -96,28 +91,7 @@ $(function () {
       trigger: '.step-content',
       start: 'top 70%'
     }
-  }); // banner滾動視差
-  // var floatTop = gsap.timeline({
-  //     defaults: {
-  //         ease: 'none'
-  //     }
-  // });
-  // floatTop
-  //     .from('[data-float="top"]', {
-  //         y: 200,
-  //         duration: 1,
-  //     })
-  //     .to('[data-float="top"]', {
-  //         y: -200,
-  //         duration: 1,
-  //     });
-  // ScrollTrigger.create({
-  //     animation: floatTop,
-  //     trigger: '.tranBanner',
-  //     start: 'top bottom',
-  //     end: 'bottom top',
-  //     scrub: true
-  // });
+  }); // 推薦文章
 
   gsap.to('[data-fade="article"]', {
     duration: 0.6,

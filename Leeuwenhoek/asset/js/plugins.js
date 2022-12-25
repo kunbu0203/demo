@@ -26,4 +26,4 @@
   if (ratio < 1) {
     viewport.setAttribute('content', 'width=device-width, initial-scale=' + ratio + ', minimum-scale=' + ratio + ', maximum-scale=' + ratio + ', user-scalable=yes');
   }
-})(360);
+})(375);

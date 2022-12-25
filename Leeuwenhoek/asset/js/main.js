@@ -1,4 +1,5 @@
 $(function () {
+  // 進場
   gsap.registerPlugin(ScrollTrigger);
   gsap.set('[data-fade]', {
     y: -50
@@ -17,7 +18,8 @@ $(function () {
   });
   gsap.set('[data-fade-down]', {
     y: -50
-  });
+  }); // insideBanner
+
   gsap.to('[data-fade-up]', {
     duration: 0.6,
     y: 0,
@@ -27,12 +29,16 @@ $(function () {
   $('[data-burger]').on('click', function (e) {
     e.preventDefault();
     $('[data-header]').toggleClass('open');
-  }); // goTop鈕
-
-  $('.gotop').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, 400);
   });
 });
+
+function isMobile() {
+  try {
+    document.createEvent("TouchEvent");
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+;

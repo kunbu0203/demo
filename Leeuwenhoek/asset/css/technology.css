@@ -49,6 +49,16 @@
   .introList-action {
     margin-top: 20px;
     text-align: center; }
+  .introList-video {
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 56.2%; }
+    .introList-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   .introList.-hor {
     display: flex;
     align-items: flex-start;
@@ -105,7 +115,7 @@
       height: 42px;
       font-size: 28px;
       border-radius: 0 0 15px 0; }
-    .introList-content {
+    .introList-content, .introList-video {
       margin-top: 40px; }
     .introList-title {
       font-size: 28px; }
@@ -150,7 +160,7 @@
       width: 35px;
       height: 35px;
       font-size: 22px; }
-    .introList-content {
+    .introList-content, .introList-video {
       margin-top: 35px; }
     .introList-title {
       font-size: 24px; }
@@ -183,7 +193,7 @@
       border-radius: 0 30px 0 0; }
     .introList-pic::after {
       border-radius: 0 0 10px 0; }
-    .introList-content {
+    .introList-content, .introList-video {
       margin-top: 30px; }
     .introList.-hor {
       display: block;
