@@ -24,15 +24,12 @@
     <link rel="shortcut icon" href="./../favicon.ico" />
     <link rel="apple-touch-icon" href="./../asset/images/touch/logo.png">
     <link rel="stylesheet" href="./../asset/css/normalize.min.css">
-    
     <link rel="stylesheet" href="./../asset/css/main.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Roboto:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     
 <link rel="stylesheet" href="./../asset/css/technology.min.css">
-
-
-    <meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -45,15 +42,10 @@
         </h1>
         <a href="#" class="header-burger" data-burger></a>
         <div class="header-nav">
-            
             <div class="nav">
-                
                 <a href="./../about.html" class="nav-item">關於我們</a>
-                
                 <a href="./index.html" class="nav-item -active">技術介紹</a>
-                
                 <a href="./../knowledge/list.html" class="nav-item">科普知識</a>
-                
                 <a href="./../contact.html" class="nav-item">聯絡我們</a>
                 
             </div>
@@ -82,7 +74,7 @@
         <div class="block-content">
             <div class="introList -gradient" data-fade="gradient">
                 <div class="introList-pic">
-                    <img src="./../asset/images/intro/molecularFormula-lg.jpg" alt="">
+                    <img src="./../asset/images/technology/molecularFormula-lg.jpg" alt="">
                 </div>
                 <div class="introList-content">
                     <div class="introList-deco" data-expand></div>
@@ -96,11 +88,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="introList-video">
+                    <iframe src="https://www.youtube.com/embed/ljXtYEiwHDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="introList -hor">
                 <div class="anchor" id="culture"></div>
                 <div class="introList-pic" data-fade-left="hor">
-                    <img src="./../asset/images/intro/microscope.jpg" alt="">
+                    <img src="./../asset/images/technology/microscope.jpg" alt="">
                 </div>
                 <div class="introList-content" data-fade-right="hor">
                     <div class="introList-title">培養體學</div>
@@ -114,7 +109,7 @@
             <div class="introList -mouse" data-fade="mouse">
                 <div class="anchor" id="mouse"></div>
                 <div class="introList-pic">
-                    <img src="./../asset/images/intro/mouse.jpg" alt="">
+                    <img src="./../asset/images/technology/mouse.jpg" alt="">
                 </div>
                 <div class="introList-content">
                     <div class="introList-title">定植小鼠</div>
@@ -126,12 +121,14 @@
                         </p>
                     </div>
                 </div>
+                <div class="introList-video">
+                    <iframe src="https://www.youtube.com/embed/ljXtYEiwHDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-    </main>
+</main>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-wrap">
@@ -189,60 +186,10 @@
     <script src="./../asset/vendor/jquery-3.6.0.min.js"></script>
     <script src="./../asset/vendor/gsap/gsap.min.js"></script>
     <script src="./../asset/vendor/gsap/ScrollTrigger.min.js"></script>
-    
     <script src="./../asset/js/plugins.min.js"></script>
     <script src="./../asset/js/main.min.js"></script>
     
-
-<script>
-$(function () {
-  gsap.set('[data-expand]', {
-    width: 0
-  });
-  var gradientEntry = gsap.timeline();
-  gradientEntry.to('[data-fade="gradient"]', {
-    duration: 0.6,
-    y: 0,
-    opacity: 1
-  }).to('[data-expand]', {
-    duration: 1,
-    width: 'calc(100% + 50vw - 50%)',
-    opacity: 1
-  });
-  ScrollTrigger.create({
-    animation: gradientEntry,
-    trigger: '.introList.-gradient',
-    start: 'top 70%'
-  });
-  var horEntry = gsap.timeline();
-  horEntry.to('[data-fade-left="hor"]', {
-    duration: 0.6,
-    x: 0,
-    opacity: 1
-  }).to('[data-fade-right="hor"]', {
-    duration: 0.6,
-    delay: -0.6,
-    x: 0,
-    opacity: 1
-  });
-  ScrollTrigger.create({
-    animation: horEntry,
-    trigger: '.introList.-hor',
-    start: 'top 70%'
-  });
-  gsap.to('[data-fade="mouse"]', {
-    duration: 0.6,
-    y: 0,
-    opacity: 1,
-    scrollTrigger: {
-      trigger: '.introList.-mouse',
-      start: 'top 70%'
-    }
-  });
-});
-</script>
-
-
+<script src="./../asset/js/technology.min.js"></script>
 </body>
 
 </html>

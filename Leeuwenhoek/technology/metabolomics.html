@@ -24,15 +24,12 @@
     <link rel="shortcut icon" href="./../favicon.ico" />
     <link rel="apple-touch-icon" href="./../asset/images/touch/logo.png">
     <link rel="stylesheet" href="./../asset/css/normalize.min.css">
-    
     <link rel="stylesheet" href="./../asset/css/main.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Roboto:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     
 <link rel="stylesheet" href="./../asset/css/technology.min.css">
-
-
-    <meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -45,15 +42,10 @@
         </h1>
         <a href="#" class="header-burger" data-burger></a>
         <div class="header-nav">
-            
             <div class="nav">
-                
                 <a href="./../about.html" class="nav-item">關於我們</a>
-                
                 <a href="./index.html" class="nav-item -active">技術介紹</a>
-                
                 <a href="./../knowledge/list.html" class="nav-item">科普知識</a>
-                
                 <a href="./../contact.html" class="nav-item">聯絡我們</a>
                 
             </div>
@@ -83,11 +75,11 @@
                     是探討生物體中所有小分子代謝物的變異，藉以呈現生物體因應生理、病理或是基因變異與環境因子所造成的影響。有別於基因體學、轉錄組學及蛋白體學，代謝體為最接近生物表現型的一門體學，並且代謝體顯示的是樣本(細胞/組織/血液/尿液)特定時間內的生理機能，因此分析其最重要的目的在於可以直接透過分子結構說明生理狀態的變化，並可從數據中找尋與特定疾病相關之生物標記，作為精準醫療上疾病診斷與預測之依據。
                 </div>
                 <div class="introContent-pic">
-                    <img src="./../asset/images/intro/molecularFormula.jpg" alt="">
+                    <img src="./../asset/images/technology/molecularFormula.jpg" alt="">
                 </div>
                 <div class="introContent-pic">
-                    <img class="-pc" src="./../asset/images/intro/process.png" alt="">
-                    <img class="-mb -process" src="./../asset/images/intro/process-mb.png" alt="">
+                    <img class="-pc" src="./../asset/images/technology/process.png" alt="">
+                    <img class="-mb -process" src="./../asset/images/technology/process-mb.png" alt="">
                 </div>
             </div>
             <div class="introContent" data-fade="1">
@@ -147,7 +139,7 @@
                         <div class="ball-item -rd" data-fade-zoom="ball">
                             <div class="ball-wrap">
                                 <div class="ball-icon">
-                                    <img src="./../asset/images/icon/intro/blood.svg" alt="">
+                                    <img src="./../asset/images/icon/technology/blood.svg" alt="">
                                 </div>
                                 <div class="ball-title">血液</div>
                                 <div class="ball-text">最小體積 100-150ul</div>
@@ -157,7 +149,7 @@
                         <div class="ball-item -yl" data-fade-zoom="ball">
                             <div class="ball-wrap">
                                 <div class="ball-icon">
-                                    <img src="./../asset/images/icon/intro/toilet.svg" alt="">
+                                    <img src="./../asset/images/icon/technology/toilet.svg" alt="">
                                 </div>
                                 <div class="ball-title">尿液</div>
                                 <div class="ball-text">最小體積 100-150ul</div>
@@ -167,7 +159,7 @@
                         <div class="ball-item -brn" data-fade-zoom="ball">
                             <div class="ball-wrap">
                                 <div class="ball-icon">
-                                    <img src="./../asset/images/icon/intro/stool.svg" alt="">
+                                    <img src="./../asset/images/icon/technology/stool.svg" alt="">
                                 </div>
                                 <div class="ball-title">糞便</div>
                                 <div class="ball-text">最小體積 100mg (濕重)</div>
@@ -177,7 +169,7 @@
                         <div class="ball-item -gn" data-fade-zoom="ball">
                             <div class="ball-wrap">
                                 <div class="ball-icon">
-                                    <img src="./../asset/images/icon/intro/measuringGlass.svg" alt="">
+                                    <img src="./../asset/images/icon/technology/measuringGlass.svg" alt="">
                                 </div>
                                 <div class="ball-title">發酵液</div>
                                 <div class="ball-text">最小體積 200ul</div>
@@ -187,7 +179,7 @@
                         <div class="ball-item -bu" data-fade-zoom="ball">
                             <div class="ball-wrap">
                                 <div class="ball-icon">
-                                    <img src="./../asset/images/icon/intro/microscope.svg" alt="">
+                                    <img src="./../asset/images/icon/technology/microscope.svg" alt="">
                                 </div>
                                 <div class="ball-title">其他</div>
                                 <div class="ball-text">細胞／組織</div>
@@ -211,8 +203,7 @@
         </div>
     </div>
 </section>
-
-    </main>
+</main>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-wrap">
@@ -270,51 +261,10 @@
     <script src="./../asset/vendor/jquery-3.6.0.min.js"></script>
     <script src="./../asset/vendor/gsap/gsap.min.js"></script>
     <script src="./../asset/vendor/gsap/ScrollTrigger.min.js"></script>
-    
     <script src="./../asset/js/plugins.min.js"></script>
     <script src="./../asset/js/main.min.js"></script>
     
-
-<script>
-$(function () {
-  $('[data-fade]').each(function (index, item) {
-    var $this = "[data-fade=\"".concat(index, "\"]");
-    gsap.to($this, {
-      duration: 0.6,
-      y: 0,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: $this,
-        start: 'top 70%'
-      }
-    });
-  });
-  $('[data-fade-zoom]').each(function (index, item) {
-    var $this = "[data-fade-zoom=\"".concat(index, "\"]");
-    gsap.to($this, {
-      duration: 0.6,
-      scale: 1,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: $this,
-        start: 'top 70%'
-      }
-    });
-  });
-  gsap.to('[data-fade-zoom="ball"]', {
-    duration: 0.6,
-    scale: 1,
-    opacity: 1,
-    stagger: 0.5,
-    scrollTrigger: {
-      trigger: '.ball',
-      start: 'top 70%'
-    }
-  });
-});
-</script>
-
-
+<script src="./../asset/js/metabolomics.min.js"></script>
 </body>
 
 </html>
