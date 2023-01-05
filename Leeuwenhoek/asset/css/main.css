@@ -509,14 +509,13 @@ body {
   margin-bottom: 70px; }
 
 .articleContent-date {
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 18px;
   letter-spacing: 2px;
   color: #8b8b8b; }
 
 .articleContent-title {
   margin-top: 4px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: 4px; }
   .articleContent-title::after {
@@ -524,19 +523,49 @@ body {
     display: block;
     width: 145px;
     height: 3px;
-    margin-top: 17px;
+    margin-top: 0.5em;
     background-image: linear-gradient(to right, #F8D074, #56B770, #1A8FAD); }
 
-.articleContent-content img {
+.articleContent-author {
+  margin-top: 1.6em;
+  font-size: 18px;
+  font-weight: 500; }
+
+.articleContent-content + .articleContent-content {
+  margin-top: 70px; }
+
+.articleContent-content > img {
   max-width: 100%;
-  border-radius: 0 0 0 50px; }
+  border-radius: 0 0 0 50px;
+  border: 1px solid #eee; }
 
-.articleContent-content p {
-  font-size: 21px;
+.articleContent-content > div {
+  font-size: 18px;
   line-height: 1.8; }
+  .articleContent-content > div > p {
+    text-indent: 2em; }
+  .articleContent-content > div.-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #129abb; }
+  .articleContent-content > div.-subTitle {
+    font-size: 25px;
+    font-weight: bold; }
+  .articleContent-content > div.-note {
+    color: #8b8b8b; }
 
-.articleContent-content * + * {
-  margin-top: 40px; }
+.articleContent-content ol,
+.articleContent-content ul {
+  margin: 0; }
+  .articleContent-content ol.-part li + li,
+  .articleContent-content ul.-part li + li {
+    margin-top: 10px; }
+
+.articleContent-content > * + * {
+  margin-top: 15px; }
+
+.articleContent-content > div.-title + div.-subTitle {
+  margin-top: 5px; }
 
 @media only screen and (max-width: 1439px) {
   .articleContent-head {
@@ -545,28 +574,39 @@ body {
     font-size: 16px; }
   .articleContent-title {
     margin-top: 2px;
-    font-size: 36px; }
-    .articleContent-title::after {
-      margin-top: 15px; }
-  .articleContent-content p {
-    font-size: 18px; }
-  .articleContent-content * + * {
-    margin-top: 35px; } }
+    font-size: 26px; }
+  .articleContent-author {
+    font-size: 16px; }
+  .articleContent-content + .articleContent-content {
+    margin-top: 50px; }
+  .articleContent-content > div {
+    font-size: 16px; }
+    .articleContent-content > div.-title {
+      font-size: 24px; }
+    .articleContent-content > div.-subTitle {
+      font-size: 21px; } }
 
 @media only screen and (max-width: 1023px) {
   .articleContent-head {
     margin-bottom: 40px; }
   .articleContent-date {
-    font-size: 14px; }
+    font-size: 15px; }
   .articleContent-title {
-    font-size: 30px; }
+    font-size: 24px; }
     .articleContent-title::after {
-      width: 120px;
-      margin-top: 10px; }
-  .articleContent-content p {
+      width: 120px; }
+  .articleContent-author {
+    font-size: 15px; }
+  .articleContent-content + .articleContent-content {
+    margin-top: 40px; }
+  .articleContent-content > div {
     font-size: 16px; }
-  .articleContent-content * + * {
-    margin-top: 30px; } }
+    .articleContent-content > div.-title {
+      font-size: 22px; }
+    .articleContent-content > div.-subTitle {
+      font-size: 18px; }
+  .articleContent-content > * + * {
+    margin-top: 10px; } }
 
 @media only screen and (max-width: 767px) {
   .articleContent-head {
@@ -574,16 +614,22 @@ body {
   .articleContent-date {
     font-size: 13px; }
   .articleContent-title {
-    font-size: 26px;
+    font-size: 20px;
     letter-spacing: 2px; }
     .articleContent-title::after {
       width: 110px; }
-  .articleContent-content img {
+  .articleContent-author {
+    font-size: 13px; }
+  .articleContent-content + .articleContent-content {
+    margin-top: 35px; }
+  .articleContent-content > img {
     border-radius: 0 0 0 30px; }
-  .articleContent-content p {
-    font-size: 16px; }
-  .articleContent-content * + * {
-    margin-top: 20px; } }
+  .articleContent-content > div {
+    font-size: 15px; }
+    .articleContent-content > div.-title {
+      font-size: 18px; }
+    .articleContent-content > div.-subTitle {
+      font-size: 16px; } }
 
 .contact {
   position: relative;

@@ -59,13 +59,14 @@
     color: #fff;
     text-shadow: 0 0 13px rgba(0, 0, 0, 0.8); }
   .banner-text {
-    margin: 50px 0;
+    margin-top: 50px;
     font-size: 26px;
     color: #fff;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.5); }
   .banner-btn {
     box-sizing: border-box;
     display: inline-block;
+    margin-top: 50px;
     padding: 15px 40px;
     font-size: 27px;
     font-weight: 500;
@@ -91,9 +92,10 @@
       .banner-title {
         font-size: 50px; }
       .banner-text {
-        margin: 35px 0;
+        margin-top: 35px;
         font-size: 20px; }
       .banner-btn {
+        margin-top: 35px;
         padding: 12px 30px;
         font-size: 21px; } }
   @media only screen and (max-width: 1279px) {
@@ -114,9 +116,10 @@
     .banner-title {
       font-size: 42px; }
     .banner-text {
-      margin: 30px 0;
+      margin-top: 30px;
       font-size: 18px; }
     .banner-btn {
+      margin-top: 30px;
       padding: 10px 25px;
       font-size: 19px; } }
 
@@ -150,11 +153,20 @@
     .intro-pic img {
       width: 100%; }
   .intro-ball {
+    position: relative;
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 680px; }
+    .intro-ball::after {
+      content: '';
+      position: absolute;
+      top: 40%;
+      left: 31.5%;
+      width: 37%;
+      padding-bottom: 27%;
+      background: url(../images/index/cycle.png) no-repeat center/contain; }
   .intro-item {
     box-sizing: border-box;
     display: flex;
@@ -196,6 +208,8 @@
       box-sizing: border-box;
       width: 560px;
       padding-right: 20px; }
+      .intro-ball::after {
+        left: 30%; }
     .intro-item {
       width: 150px;
       height: 150px;
@@ -220,6 +234,9 @@
       .intro-ball {
         width: 508px;
         padding-right: 0; }
+        .intro-ball::after {
+          top: 44%;
+          left: 32%; }
       .intro-item {
         margin: 40px 52px; } }
   @media only screen and (max-width: 1023px) {
@@ -241,6 +258,12 @@
         width: 360px;
         margin-top: -230px;
         margin-left: auto; }
+        .intro-ball::after {
+          top: 140px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          padding-bottom: 100px; }
       .intro-item {
         width: 120px;
         height: 120px;
@@ -262,6 +285,7 @@
       width: 100%; }
     .intro-ball {
       width: calc(100% + 40px);
+      min-width: 360px;
       margin: 30px -20px 0; } }
 
 .total {
@@ -526,14 +550,14 @@
       width: 100%; }
   .step-title {
     margin: 16px 0;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 500; }
   .step-list {
-    font-size: 21px;
+    font-size: 18px;
     color: #8b8b8b; }
     .step-list ul {
       margin: 0;
-      padding-left: 30px;
+      padding-left: 28px;
       line-height: 1.2; }
       .step-list ul li + li {
         margin-top: 12px; }
@@ -548,9 +572,9 @@
       font-size: 28px;
       border-radius: 0 0 15px 0; }
     .step-title {
-      font-size: 28px; }
+      font-size: 22px; }
     .step-list {
-      font-size: 18px; } }
+      font-size: 16px; } }
   @media only screen and (max-width: 1279px) {
     .step {
       padding: 80px 0; }
@@ -566,7 +590,7 @@
         margin: 10px 0;
         font-size: 24px; }
       .step-list {
-        font-size: 16px; }
+        font-size: 15px; }
         .step-list ul {
           padding-left: 28px; }
           .step-list ul li + li {
