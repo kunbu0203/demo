@@ -535,7 +535,7 @@ body {
   margin-top: 70px; }
 
 .articleContent-content > img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 0 0 0 50px;
   border: 1px solid #eee; }
 
