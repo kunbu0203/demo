@@ -1,0 +1,14 @@
+{
+    "name": "和泰產物保險",
+    "short_name": "和泰產險",
+    "icons": [
+        {
+            "src": "assets/images/touch/logo.png",
+            "type": "image/png",
+            "sizes": "500x500"
+        }
+    ],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#fafafa",
+    "theme_color": "#fafafa"
+}
