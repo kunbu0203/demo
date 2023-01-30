@@ -1708,6 +1708,18 @@ body {
     .rules-content {
       font-size: 15px; } }
 
+@-webkit-keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@keyframes loading {
+  0% {
+    transform: translate(-50%, -50%) rotate(0); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
 .fall {
   box-sizing: border-box;
   max-width: 1320px;
@@ -1723,19 +1735,47 @@ body {
     box-sizing: border-box;
     width: calc((100% - 80px)/4);
     margin: 15px 10px;
-    padding: 10px;
+    padding-bottom: calc((100% - 80px)/4);
     box-shadow: 7.5px 6.6px 9px 1px rgba(81, 160, 52, 0.53);
     background-color: #fff; }
     .fall-item img {
-      width: 100%; }
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: opacity .3s; }
     .fall-item p {
+      position: absolute;
       margin-top: 10px;
       font-size: 20px;
       font-weight: bold;
-      color: #49853c; }
+      color: #49853c;
+      opacity: 0;
+      transition: opacity .3s; }
+    .fall-item::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      background: url(../images/icon/loading.png) no-repeat center/contain;
+      -webkit-animation: loading 2s linear infinite;
+              animation: loading 2s linear infinite; }
+    .fall-item.-load {
+      padding: 10px; }
+      .fall-item.-load img {
+        position: unset;
+        opacity: 1; }
+      .fall-item.-load p {
+        position: unset;
+        opacity: 1; }
+      .fall-item.-load::before {
+        content: none; }
   @media only screen and (max-width: 1023px) {
     .fall-item {
-      width: calc((100% - 60px)/3); } }
+      width: calc((100% - 60px)/3);
+      padding-bottom: calc((100% - 60px)/3); } }
   @media only screen and (max-width: 767px) {
     .fall {
       padding: 0 20px; }
@@ -1744,11 +1784,13 @@ body {
       .fall-item {
         width: calc((100% - 20px)/2);
         margin: 10px 5px;
-        padding: 5px;
+        padding-bottom: calc((100% - 20px)/2);
         box-shadow: 5px 3px 4px 1px rgba(81, 160, 52, 0.4); }
         .fall-item p {
           margin-top: 5px;
-          font-size: 18px; } }
+          font-size: 18px; }
+        .fall-item.-load {
+          padding: 5px; } }
 
 .popup {
   position: fixed;

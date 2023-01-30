@@ -7,19 +7,21 @@ $(function () {
   } // 照片瀑布流
 
 
-  window.onload = function () {
-    var $grid = $('[data-fall]').masonry({
-      itemSelector: '.fall-item',
-      columnWidth: '.fall-item',
-      percentPosition: true,
-      horizontalOrder: true
-    });
-    $grid.masonry('on', 'layoutComplete', function () {
-      $('[data-fall]').addClass('-load');
-    });
+  var $grid = $('[data-fall]').masonry({
+    itemSelector: '.fall-item',
+    columnWidth: '.fall-item',
+    percentPosition: true,
+    horizontalOrder: true,
+    isAnimated: true
+  });
+  $('[data-fall] img').lazyload();
+  $grid.masonry('on', 'layoutComplete', function () {
+    $('[data-fall]').addClass('-load');
+  });
+  $('[data-fall] img').on('load', function () {
+    $(this).closest('.fall-item').addClass('-load');
     $grid.masonry('layout');
-  }; // 表單彈窗開啟
-
+  }); // 表單彈窗開啟
 
   $('[data-popup-open="form"]').on('click', function (e) {
     e.preventDefault();
