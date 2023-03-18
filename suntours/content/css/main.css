@@ -731,7 +731,7 @@ body {
     display: inline-block;
     line-height: 1.1;
     color: #fff;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); }
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
     .banner-title .ch {
       display: flex;
       align-items: center;
@@ -1171,6 +1171,20 @@ article.content {
           width: 40px;
           height: 4px; } }
 
+.cardList {
+  position: relative;
+  overflow: hidden; }
+  .cardList img {
+    width: 100%; }
+  .cardList-item + .cardList-item {
+    margin-top: 70px; }
+  @media only screen and (max-width: 1023px) {
+    .cardList-item + .cardList-item {
+      margin-top: 40px; } }
+  @media only screen and (max-width: 767px) {
+    .cardList-item + .cardList-item {
+      margin-top: 30px; } }
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
@@ -1249,22 +1263,21 @@ article.content {
   .redLabelCard.index .redLabelCard-title {
     color: #030303; }
   .redLabelCard.lg {
-    flex-direction: row;
     align-items: center;
     box-shadow: none; }
   .redLabelCard.lg .redLabelCard-pic {
-    width: 660px; }
+    width: 100%; }
   .redLabelCard.lg .redLabelCard-content {
     flex: 1;
     position: relative;
-    margin-left: -35px;
-    padding: 25px 45px;
-    box-shadow: 0px 3px 8px 5px rgba(104, 103, 103, 0.1);
+    margin-top: 30px;
+    padding: 0;
     z-index: 2; }
   .redLabelCard.lg .redLabelCard-title {
     font-size: 24px;
     color: #030303; }
   .redLabelCard.lg .redLabelCard-text {
+    margin-bottom: 0;
     color: #030303; }
   .redLabelCard.lg .redLabelCard-btn {
     width: 180px;
@@ -1307,10 +1320,6 @@ article.content {
       padding-bottom: 20px; }
     .redLabelCard-text {
       margin-bottom: 25px; }
-    .redLabelCard.lg .redLabelCard-pic {
-      width: 560px; }
-    .redLabelCard.lg .redLabelCard-content {
-      padding: 20px 25px; }
     .redLabelCard.lg .redLabelCard-title {
       font-size: 21px; }
     .redLabelCard.ver .redLabelCard-pic {
@@ -1322,10 +1331,8 @@ article.content {
       padding: 15px; }
     .redLabelCard-title {
       font-size: 19px; }
-    .redLabelCard.lg .redLabelCard-pic {
-      width: 450px; }
     .redLabelCard.lg .redLabelCard-content {
-      padding: 15px; }
+      margin-top: 20px; }
     .redLabelCard.lg .redLabelCard-title {
       font-size: 20px; }
     .redLabelCard.ver .redLabelCard-pic {
@@ -1345,13 +1352,6 @@ article.content {
           height: 4px; }
       .redLabelCard-text {
         margin-bottom: 20px; }
-      .redLabelCard.lg {
-        box-shadow: 0px 0 10px 0 rgba(104, 103, 103, 0.2); }
-      .redLabelCard.lg .redLabelCard-pic {
-        width: 100%; }
-      .redLabelCard.lg .redLabelCard-content {
-        margin: 0;
-        box-shadow: none; }
       .redLabelCard.lg .redLabelCard-title {
         font-size: 18px; }
       .redLabelCard.ver .redLabelCard-pic {
@@ -1629,8 +1629,11 @@ article.content {
     margin-left: 60px;
     font-size: 22px;
     line-height: 52px; }
+    .introCard-text-left {
+      margin-right: 60px;
+      margin-left: 0; }
     .introCard-text span {
-      font-size: 30px; }
+      font-size: 38px; }
   .introCard.left .introCard-pic {
     padding-bottom: 40px; }
     .introCard.left .introCard-pic::before {
@@ -1703,6 +1706,8 @@ article.content {
         bottom: 50px; }
       .introCard.left .introCard-text {
         margin-left: 0; }
+      .introCard .introCard-text-left {
+        margin-right: 0; }
       .introCard.top .introCard-pic {
         max-width: none; }
         .introCard.top .introCard-pic img {
@@ -1723,7 +1728,7 @@ article.content {
         line-height: 34px;
         margin-top: 20px; }
         .introCard-text span {
-          font-size: 24px; }
+          font-size: 23px; }
       .introCard.left .introCard-tag {
         bottom: 30px; }
       .introCard.top .introCard-pic::before {
@@ -2911,7 +2916,7 @@ p {
 .introduction {
   margin-bottom: 60px;
   font-size: 27px;
-  font-weight: 500;
+  /* font-weight: 500; */
   line-height: 1.4; }
   .introduction span {
     margin-left: 15px;
@@ -2947,6 +2952,9 @@ p {
   @media only screen and (max-width: 1299px) {
     .introduction {
       font-size: 24px; }
+      .introduction.aboutTitle,
+      .introduction.about span {
+        font-size: 26px; }
       .introduction span {
         margin-left: 10px;
         font-size: 40px; }
@@ -2965,6 +2973,11 @@ p {
   @media only screen and (max-width: 767px) {
     .introduction {
       font-size: 16px; }
+      .introduction.aboutTitle {
+        margin-bottom: 0; }
+      .introduction.aboutTitle,
+      .introduction.about span {
+        font-size: 23px; }
       .introduction span {
         margin-left: 5px;
         padding-left: 3px;
@@ -2997,7 +3010,7 @@ p {
 .statusInfo {
   box-sizing: border-box;
   width: 100px;
-  color: #752e0b;
+  color: #823e2e;
   text-align: center; }
   .statusInfo::before {
     content: '';
@@ -3006,32 +3019,38 @@ p {
     width: 20px;
     height: 20px;
     background-image: url(./../images/icon/status-btn/pen.svg); }
-  .statusInfo.hot::before {
-    background-image: url(./../images/icon/status-btn/star.svg); }
+  .statusInfo.hot {
+    color: #e10202; }
+    .statusInfo.hot::before {
+      background-image: url(./../images/icon/status-btn/star.svg); }
   .statusInfo.check {
-    color: #43bbe2; }
+    color: #01d2eb; }
     .statusInfo.check::before {
-      background-image: url(./../images/icon/status-btn/check.svg); }
-  .statusInfo.end {
-    color: #bab8b8; }
-    .statusInfo.end::before {
-      background-image: url(./../images/icon/status-btn/cross.svg); }
-  .statusInfo.coming {
-    color: #bab8b8; }
-    .statusInfo.coming::before {
-      background-image: url(./../images/icon/status-btn/bell.svg); }
+      background-image: url(./../images/icon/status-btn/checked.svg); }
+  .statusInfo.almostFull {
+    color: #e1cf02; }
+    .statusInfo.almostFull::before {
+      background-image: url(./../images/icon/status-btn/clock.svg); }
+  .statusInfo.two {
+    color: #c71adb; }
+    .statusInfo.two::before {
+      background-image: url(./../images/icon/status-btn/people.svg); }
   .statusInfo.standby {
-    color: #875c5c; }
+    color: #7b7b7b; }
     .statusInfo.standby::before {
       background-image: url(./../images/icon/status-btn/hourglass.svg); }
-  .statusInfo.almost {
-    color: #ac1111; }
-    .statusInfo.almost::before {
-      background-image: url(./../images/icon/status-btn/almost.svg); }
-  .statusInfo.two {
-    color: #ac1111; }
-    .statusInfo.two::before {
-      background-image: url(./../images/icon/status-btn/stopwatch.svg); }
+  .statusInfo.full {
+    color: #2828d3; }
+    .statusInfo.full::before {
+      background-image: url(./../images/icon/status-btn/plane.svg); }
+  .statusInfo.coming {
+    color: #ababab; }
+    .statusInfo.coming::before {
+      background-image: url(./../images/icon/status-btn/bell.svg); }
+  .statusInfo.almostGroup {
+    color: #ec7501; }
+    .statusInfo.almostGroup::before {
+      background-image: url(./../images/icon/status-btn/timetable.svg); }
 
 .hidden {
   display: none; }
