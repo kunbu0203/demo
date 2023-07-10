@@ -309,7 +309,8 @@ body {
       background-color: #fff; }
   .banner-name {
     font-size: 9.89583%;
-    text-shadow: 0.03em 0.05em 0 #9b5146; }
+    text-shadow: 0.03em 0.05em 0 #9b5146;
+    white-space: nowrap; }
   .banner-en {
     margin-right: -0.16em;
     font-size: 2.70833%;
