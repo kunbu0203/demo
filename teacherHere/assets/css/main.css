@@ -820,14 +820,6 @@ select {
   color: #808080;
 }
 
-.link-icon img {
-  vertical-align: text-top;
-  height: 1.5em;
-}
-.link-icon span + img {
-  margin-left: 8px;
-}
-
 .subtitle-icon .far {
   background-color: #d25746;
   color: #fff;
@@ -875,11 +867,11 @@ select {
 .paragraph-action {
   position: absolute;
   top: 50%;
-  right: -150px;
+  right: -100px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  font-size: 24px;
+  font-size: 18px;
 }
 .paragraph-title {
   margin-bottom: 40px;
@@ -902,7 +894,7 @@ select {
   border-radius: 50%;
   background-color: #cd5746;
 }
-@media screen and (max-width: 1559px) {
+@media screen and (max-width: 1439px) {
   .paragraph-action {
     right: 0;
   }
