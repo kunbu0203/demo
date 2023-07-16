@@ -1,0 +1,33 @@
+.btn {
+  padding: 0 3em; }
+
+.section-title {
+  text-align: center; }
+
+.forget-form .field-section {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.forget-form .field-label {
+  width: 4em; }
+
+.forget-form .field-content {
+  padding-left: 4em;
+  width: 37em;
+  margin-bottom: 2em; }
+  .forget-form .field-content ul {
+    margin-left: 0;
+    padding-left: 2em; }
+  .forget-form .field-content li {
+    list-style-type: circle; }
+
+@media screen and (max-width: 768px) {
+  .forget-form .field-content {
+    width: auto; } }
+
+@media screen and (max-width: 480px) {
+  .forget-form .field-content {
+    padding-left: 0; } }
+
+/*# sourceMappingURL=forgetpw.css.map */

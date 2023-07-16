@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.938" height="83" viewBox="0 0 17.938 83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #2d2d2d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="形狀_1" data-name="形狀 1" class="cls-1" d="M203,394l16,38-16,43" transform="translate(-202 -393)"/>
+</svg>
