@@ -1,8 +1,37 @@
+.section {
+  padding: 80px 0;
+}
+.section:last-child {
+  padding-bottom: 0;
+}
+.section-title {
+  text-align: center;
+}
+
 .explanation {
+  padding-top: 40px;
   padding-bottom: 80px;
 }
+.explanation-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.explanation-title h2 {
+  color: #eca72b;
+  font-size: 64px;
+  margin-bottom: 0;
+}
+.explanation-title h3 {
+  font-weight: 100;
+  font-size: 38px;
+  margin-bottom: 0;
+}
+.explanation-title span {
+  font-size: 30px;
+  color: #b0b0b0;
+}
 .explanation-main {
-  height: 1308px;
+  height: 1500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,159 +42,130 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-image: url("../images/index/explanation-bg.png");
-  background-position: top center;
+  background-image: url("../images/apply/explanation-bg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .explanation-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .explanation-content-box {
-  width: 37%;
+  width: 45%;
 }
 .explanation-content:nth-child(1), .explanation-content:nth-child(3) {
-  padding-left: 58%;
+  padding-left: 60%;
 }
 .explanation-content:nth-child(1) > div, .explanation-content:nth-child(3) > div {
   width: auto;
 }
 .explanation-content:nth-child(1) {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 31%;
-          flex: 0 0 31%;
+      -ms-flex: 0 0 23.6%;
+          flex: 0 0 23.6%;
 }
 .explanation-content:nth-child(2) {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 22%;
-          flex: 0 0 22%;
-  padding: 5% 0 0 5%;
+      -ms-flex: 0 0 27%;
+          flex: 0 0 27%;
 }
 .explanation-content:nth-child(3) {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 22%;
-          flex: 0 0 22%;
+      -ms-flex: 0 0 22.2%;
+          flex: 0 0 22.2%;
+}
+.explanation-content:nth-child(4) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 27.2%;
+          flex: 0 0 27.2%;
 }
 .explanation-img {
   display: none;
 }
-.explanation-text {
-  color: #808080;
-}
-.explanation-title {
-  margin-bottom: 28px;
-  font-size: 33px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-.explanation-desc {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.8;
-}
-.explanation-btn {
-  display: inline-block;
-  margin-top: 38px;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #fff;
-  padding: 4px 23px 5px;
-  border-radius: 10px;
-  background-color: #e6a22a;
-}
-@media screen and (min-width: 1025px) {
-  .explanation-btn:hover {
-    background-color: #d18d13;
-  }
+.explanation .subtitle {
+  margin-bottom: 0;
+  font-size: 32px;
 }
 @media screen and (max-width: 1280px) {
   .explanation-main {
-    height: 105vw;
+    height: 125vw;
   }
-  .explanation-title {
-    margin-bottom: 24px;
+  .explanation .subtitle {
     font-size: 30px;
-  }
-  .explanation-desc {
-    font-size: 16px;
-  }
-  .explanation-btn {
-    margin-top: 34px;
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .explanation-content:nth-child(2) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 31%;
-            flex: 0 0 31%;
-    padding: 11% 0 0 5%;
+  .explanation-title h2 {
+    font-size: 48px;
+    margin-bottom: 0;
   }
-  .explanation-title {
-    margin-bottom: 18px;
+  .explanation-title h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  .explanation-title span {
     font-size: 24px;
   }
-  .explanation-desc {
-    font-size: 15px;
-  }
-  .explanation-btn {
-    margin-top: 28px;
-    padding: 3px 18px 5px;
-    font-size: 17px;
+  .explanation .subtitle {
+    font-size: 28px;
   }
 }
-@media screen and (max-width: 767px) {
-  .explanation-container {
-    width: 100%;
+@media screen and (max-width: 768px) {
+  .explanation-title h2 {
+    font-size: 6.2vw;
   }
+  .explanation-title h3 {
+    font-size: 4vw;
+  }
+  .explanation-title span {
+    font-size: 3vw;
+  }
+  .explanation .subtitle {
+    font-size: 24px;
+  }
+  .explanation-content:nth-child(1), .explanation-content:nth-child(3) {
+    padding-left: 55%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .explanation .subtitle {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 560px) {
   .explanation-main {
     height: auto;
     display: block;
     background: none;
   }
-  .explanation-content {
+  .explanation-img {
     display: block;
+    margin-bottom: 20px;
+  }
+  .explanation-content {
     margin-bottom: 40px;
-    padding: 0 16px;
   }
   .explanation-content:nth-child(1), .explanation-content:nth-child(3) {
-    padding-left: 16px;
-  }
-  .explanation-content:nth-child(2) {
-    padding: 0 16px;
+    padding-left: 0;
   }
   .explanation-content-box {
     width: auto;
   }
-  .explanation-img {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0 40px;
+  .explanation-content:last-child {
+    margin-bottom: 0;
+  }
+  .explanation-container {
+    width: 80%;
+  }
+  .explanation .subtitle {
     text-align: center;
+    margin-bottom: 0.5em;
   }
-  .explanation-img img {
-    width: 100%;
-    max-width: 400px;
-  }
-  .explanation-content:nth-child(3) .explanation-img {
-    padding: 0 20px;
-  }
-  .explanation-title {
-    font-size: 22px;
-  }
-}
-
-.section {
-  padding: 80px 0;
-}
-.section:last-child {
-  padding-bottom: 0;
-}
-.section-title {
-  text-align: center;
 }
 
 .register .field-label {
@@ -216,7 +216,7 @@
   -webkit-transform: translate(50%, -150%);
       -ms-transform: translate(50%, -150%);
           transform: translate(50%, -150%);
-  background-image: url("../images/index/step-arrow.png");
+  background-image: url("../images/apply/step-arrow.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -275,7 +275,7 @@
     -webkit-transform: translate(-50%, 0%);
         -ms-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
-    background-image: url("../images/index/step-arrow-down.png");
+    background-image: url("../images/apply/step-arrow-down.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
