@@ -99,7 +99,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 136px;
+  padding-top: 131.5px;
   color: #808080;
 }
 .teacherInfo-head {
@@ -113,13 +113,14 @@
   background-color: #ffefd4;
 }
 .teacherInfo-pic {
-  margin-top: -136px;
+  margin-top: -131.5px;
   text-align: center;
 }
 .teacherInfo-pic img {
   width: 263px;
   max-width: none;
-  height: 272px;
+  height: 263px;
+  border-radius: 50%;
 }
 .teacherInfo-name {
   font-size: 46px;
@@ -183,17 +184,17 @@
 }
 @media screen and (max-width: 1279px) {
   .teacherInfo {
-    padding-top: 113.5px;
+    padding-top: 110px;
   }
   .teacherInfo-head {
     width: 360px;
   }
   .teacherInfo-pic {
-    margin-top: -113.5px;
+    margin-top: -110px;
   }
   .teacherInfo-pic img {
     width: 220px;
-    height: 227px;
+    height: 220px;
   }
   .teacherInfo-content {
     margin-left: 40px;
@@ -204,18 +205,18 @@
 }
 @media screen and (max-width: 1023px) {
   .teacherInfo {
-    padding-top: 93px;
+    padding-top: 90px;
   }
   .teacherInfo-head {
     width: 300px;
     padding: 0 15px 25px;
   }
   .teacherInfo-pic {
-    margin-top: -93px;
+    margin-top: -90px;
   }
   .teacherInfo-pic img {
     width: 180px;
-    height: 186px;
+    height: 180px;
   }
   .teacherInfo-name {
     font-size: 38px;
