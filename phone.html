@@ -18,37 +18,7 @@
     gamma-y: <span id="gamma"></span>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script>
-    $('#btn').on('click', onClick());
-
-    function onClick() {
-        if (typeof DeviceMotionEvent.requestPermission === 'function') {
-            // Handle iOS 13+ devices.
-            DeviceMotionEvent.requestPermission()
-                .then((state) => {
-                    console.log(state);
-                    alert(state);
-                    if (state === 'granted') {
-                        window.addEventListener('devicemotion', function(event) {
-                            console.log('handleOrientation', event);
-                            const alpha = event.alpha;
-                            const beta = event.beta;
-                            const gamma = event.gamma;
-                            console.log(beta);
-                            $('#beta').text(beta);
-                            $('#gamma').text(gamma);
-                        });
-                    } else {
-                        console.error('Request to access the orientation was rejected');
-                    }
-                })
-                .catch(console.error);
-        } else {
-            // Handle regular non iOS 13+ devices.
-            window.addEventListener('devicemotion', handleOrientation);
-        }
-    }
-</script>
+    <script src="./phone.js"></script>
 </body>
 
 </html>
