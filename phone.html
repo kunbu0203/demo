@@ -17,49 +17,35 @@
     beta-x: <span id="beta"></span><br>
     gamma-y: <span id="gamma"></span>
 
-
-<script>
-$('#btn').on('click', onClick);
-
-function onClick() {
-  if (typeof DeviceMotionEvent.requestPermission === 'function') {
-    // Handle iOS 13+ devices.
-    DeviceMotionEvent.requestPermission().then(function (state) {
-      if (state === 'granted') {
-        window.addEventListener('devicemotion', handleOrientation);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+    $('#btn').on('click', onClick);
+    
+    function onClick() {
+      if (typeof DeviceMotionEvent.requestPermission === 'function') {
+        // Handle iOS 13+ devices.
+        DeviceMotionEvent.requestPermission().then(function (state) {
+          if (state === 'granted') {
+            window.addEventListener('devicemotion', handleOrientation);
+          } else {
+            console.error('Request to access the orientation was rejected');
+          }
+        }).catch(console.error);
       } else {
-        console.error('Request to access the orientation was rejected');
+        // Handle regular non iOS 13+ devices.
+        window.addEventListener('devicemotion', handleOrientation);
       }
-    }).catch(console.error);
-  } else {
-    // Handle regular non iOS 13+ devices.
-    window.addEventListener('devicemotion', handleOrientation);
-  }
-}
-
-function handleOrientation(event) {
-  var alpha = event.alpha;
-  var beta = event.beta;
-  var gamma = event.gamma;
-  console.log(beta);
-  $('#beta').text(beta);
-  $('#gamma').text(gamma);
-}
-</script>
+    }
     
-    <!-- Global js / Begin -->
-    <script src="./assets/vendor/modernizr-3.11.7.min.js"></script>
-    <script src="./assets/vendor/jquery-3.6.0.min.js"></script>
-    <!-- Page plugin js / Begin -->
-    
-    <!-- Page plugin js / End -->
-    <script src="./assets/js/plugins.min.js"></script>
-    <script src="./assets/js/main.min.js"></script>
-    <!-- Global js / End -->
-
-    <!-- Page js / Begin -->
-    
-    <!-- Page js / End -->
+    function handleOrientation(event) {
+      var alpha = event.alpha;
+      var beta = event.beta;
+      var gamma = event.gamma;
+      console.log(beta);
+      $('#beta').text(beta);
+      $('#gamma').text(gamma);
+    }
+    </script>
 </body>
 
 </html>
