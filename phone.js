@@ -1,6 +1,7 @@
 $('#btn').on('click', onClick());
 
 function onClick() {
+  console.log('click');
   if (typeof DeviceMotionEvent.requestPermission === 'function') {
     // Handle iOS 13+ devices.
     DeviceMotionEvent.requestPermission().then(function (state) {
