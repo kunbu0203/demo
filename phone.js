@@ -1,7 +1,7 @@
-$('#btn').on('click', onClick());
+$('#btn').on('click', function (e) {
+  e.preventDefault();
+  alert(typeof DeviceMotionEvent.requestPermission);
 
-function onClick() {
-  console.log('click');
   if (typeof DeviceMotionEvent.requestPermission === 'function') {
     // Handle iOS 13+ devices.
     DeviceMotionEvent.requestPermission().then(function (state) {
@@ -34,4 +34,4 @@ function onClick() {
       $('#gamma').text(gamma);
     });
   }
-}
+});
