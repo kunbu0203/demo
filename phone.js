@@ -9,7 +9,7 @@ $('#btn').on('click', function (e) {
       alert(state);
 
       if (state === 'granted') {
-        window.addEventListener('devicemotion', function (event) {
+        window.addEventListener('deviceorientation', function (event) {
           console.log('handleOrientation', event);
           var alpha = event.alpha;
           var beta = event.beta;
@@ -24,7 +24,7 @@ $('#btn').on('click', function (e) {
     }).catch(console.error);
   } else {
     // Handle regular non iOS 13+ devices.
-    window.addEventListener('devicemotion', function (event) {
+    window.addEventListener('deviceorientation', function (event) {
       console.log('handleOrientation', event);
       var alpha = event.alpha;
       var beta = event.beta;
