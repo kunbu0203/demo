@@ -25,6 +25,8 @@
       if (typeof DeviceMotionEvent.requestPermission === 'function') {
         // Handle iOS 13+ devices.
         DeviceMotionEvent.requestPermission().then(function (state) {
+            console.log(state);
+                    alert(state);
           if (state === 'granted') {
             window.addEventListener('devicemotion', handleOrientation);
           } else {
