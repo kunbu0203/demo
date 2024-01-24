@@ -32,8 +32,8 @@ $(function () {
   }).trigger('resize.vh');
   $('.container-btn').click(function () {
     gtag('event', 'click', {
-      event_category: '會員頁',
-      event_label: $('.container-btn').hasClass('-vip') ? 'VIP一起來看看' : '一般一起來看看'
+        '類型': '會員頁',
+        '標籤': $('.container-btn').hasClass('-vip') ? 'VIP一起來看看' : '一般一起來看看'
     });
   });
   $('.goShop').click(function () {
