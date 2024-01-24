@@ -48,6 +48,13 @@ $(function () {
       event_label: '再看一次'
     });
   });
+
+  window.onbeforeunload = function () {
+        // 使用者不在頁面上時要做的事……
+        gtag('event', 'stay', {
+            cut1Stay: '2000'
+        })
+    };
 });
 
 // loading
