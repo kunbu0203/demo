@@ -1,16 +1,17 @@
 <!doctype html>
-<html class="no-js" lang="zh-Hant-TW">
+<html class="no-js" lang="zh-Hant-TW" translate="no">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BG78BBB8K8"></script>
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BG78BBB8K8"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BG78BBB8K8');
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'G-BG78BBB8K8');
 </script>
 
 
@@ -74,7 +75,7 @@
 <div class="container swiper" data-slider>
     <div class="container-wrap swiper-wrapper">
         <div class="container-item swiper-slide -cartIn -cartOut" data-swiper-autoplay="5000">
-            <div class="index">
+            <div class="index" data-cut-name="首頁">
                 <div class="index-wrap -haveToFadeOut">
                     <div class="index-items">
                         <div class="index-item -cabbage">
@@ -113,7 +114,7 @@
         
         <div class="container-item swiper-slide -cartIn -cartOut" data-swiper-autoplay="9000">
             <!-- 一般會員 -->
-            <div class="welcome">
+            <div class="welcome" data-cut-name="會員頁">
                 <div class="welcome-wrap -haveToFadeOut">
                     <div class="welcome-text">
                         <div class="text">
@@ -140,7 +141,7 @@
                 </div>
             </div>
             <!-- vip會員 -->
-            <!-- <div class="welcome">
+            <!-- <div class="welcome" data-cut-name="會員頁">
                 <div class="welcome-wrap -haveToFadeOut">
                     <div class="welcome-flag">
                         <img src="./assets/image/bg/deco/flag.png" alt="">
@@ -171,7 +172,7 @@
                 </div>
             </div> -->
             <!-- vvip會員 -->
-            <!-- <div class="welcome">
+            <!-- <div class="welcome" data-cut-name="會員頁">
                 <div class="welcome-wrap -haveToFadeOut">
                     <div class="welcome-flag">
                         <img src="./assets/image/bg/deco/flag.png" alt="">
@@ -204,7 +205,7 @@
         </div>
         
         <div class="container-item swiper-slide -cartIn" data-swiper-autoplay="8000">
-            <div class="favoriteCategory">
+            <div class="favoriteCategory" data-cut-name="最愛購買">
                 <div class="favoriteCategory-wrap -haveToFadeOut">
                     <div class="favoriteCategory-title">
                         <img src="./assets/image/title/favorite.png" alt="">
@@ -237,7 +238,7 @@
             </div>
         </div>
         <div class="container-item swiper-slide -cartOut" data-swiper-autoplay="7000">
-            <div class="favoriteCategory -ranking">
+            <div class="favoriteCategory -ranking" data-cut-name="最愛購買前三名">
                 <div class="favoriteCategory-wrap -haveToFadeOut">
                     <div class="favoriteCategory-title">
                         <img src="./assets/image/title/cart.png" alt="">
@@ -272,7 +273,7 @@
         </div>
         
         <div class="container-item swiper-slide" data-swiper-autoplay="10000">
-            <div class="consumption -most">
+            <div class="consumption -most" data-cut-name="最愛購買品項">
                 <div class="consumption-wrap -haveToFadeOut">
                     <div class="consumption-title">
                         <img src="./assets/image/title/times.png" alt="">
@@ -359,7 +360,7 @@
         </div>
         <div class="container-item swiper-slide -cartIn" data-swiper-autoplay="9000">
             <!-- 如為消費前50%會員，請移除class -notTop50 -->
-            <div class="consumption -magic -notTop50">
+            <div class="consumption -magic -notTop50" data-cut-name="總消費金額">
                 <div class="consumption-wrap -haveToFadeOut">
                     <div class="consumption-title">
                         <img src="./assets/image/title/magic.png" alt="">
@@ -395,7 +396,7 @@
             </div>
         </div>
         <div class="container-item swiper-slide -cartOut" data-swiper-autoplay="7500">
-            <div class="consumption -cool">
+            <div class="consumption -cool" data-cut-name="總消費點數">
                 <div class="consumption-wrap -haveToFadeOut">
                     <div class="consumption-title">
                         <img src="./assets/image/title/cool.png" alt="">
@@ -429,7 +430,7 @@
         </div>
         
         <div class="container-item swiper-slide -cartIn" data-swiper-autoplay="7000">
-            <div class="point">
+            <div class="point" data-cut-name="未兌換點數">
                 <div class="point-memo">
                     <div>
                         <div class="point-wrap -haveToFadeOut">
@@ -464,7 +465,7 @@
             </div>
         </div>
         <div class="container-item swiper-slide -cartOut" data-swiper-autoplay="10000">
-            <div class="point -store">
+            <div class="point -store" data-cut-name="常去門市">
                 <div class="point-memo">
                     <div>
                         <div class="point-wrap -haveToFadeOut">
@@ -510,7 +511,7 @@
         </div>
         
         <div class="container-item swiper-slide" data-swiper-autoplay="7000">
-            <div class="memoir -first">
+            <div class="memoir -first" data-cut-name="回憶過場">
                 <div class="memoir-polaroid">
                     <div>
                         <div class="memoir-title">
@@ -527,7 +528,7 @@
             </div>
         </div>
         <div class="container-item swiper-slide" data-swiper-autoplay="10000">
-            <div class="memoir">
+            <div class="memoir" data-cut-name="消費最高日">
                 <div class="memoir-polaroid">
                     <div>
                         <div class="memoir-text">
@@ -556,7 +557,8 @@
             </div>
         </div>
         <div class="container-item swiper-slide" data-swiper-autoplay="7000">
-            <div class="memoir -num">
+            <!-- 如果是顯示拜訪家樂福的次數，請將data-cut-name="門市間數" 改成data-cut-name="門市次數" -->
+            <div class="memoir -num" data-cut-name="門市間數">
                 <div class="memoir-polaroid">
                     <div>
                         <div class="memoir-text">
@@ -592,7 +594,7 @@
         </div>
         
         <div class="container-item swiper-slide" data-swiper-autoplay="11000">
-            <div class="earth">
+            <div class="earth" data-cut-name="i商品消費">
                 <div class="earth-flag -l">
                     <img src="./assets/image/bg/deco/flag-l.png" alt="">
                 </div>
@@ -620,7 +622,7 @@
                 </div>
             </div>
             <!-- 沒買過 -->
-            <!-- <div class="earth -none">
+            <!-- <div class="earth -none" data-cut-name="i商品消費">
                 <div class="earth-flag -l">
                     <img src="./assets/image/bg/deco/flag-l.png" alt="">
                 </div>
@@ -650,7 +652,7 @@
         
         <div class="container-item swiper-slide -cartIn -cartOut" data-swiper-autoplay="18000">
             <!-- 暖心大廚神 -->
-            <div class="summary">
+            <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -681,7 +683,7 @@
                 </div>
             </div>
             <!-- 微醺品酒師 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -712,7 +714,7 @@
                 </div>
             </div> -->
             <!-- 玩美生活家 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -743,7 +745,7 @@
                 </div>
             </div> -->
             <!-- 世界美食通 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -774,7 +776,7 @@
                 </div>
             </div> -->
             <!-- 幸福毛爸媽 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -805,7 +807,7 @@
                 </div>
             </div> -->
             <!-- 智慧網購王 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -836,7 +838,7 @@
                 </div>
             </div> -->
             <!-- 地球守護神 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -867,7 +869,7 @@
                 </div>
             </div> -->
             <!-- 家樂福幸運星 -->
-            <!-- <div class="summary">
+            <!-- <div class="summary" data-cut-name="Persona">
                 <div class="summary-wrap">
                     <div class="summary-title">
                         <img src="./assets/image/title/summary.png" alt="">
@@ -900,7 +902,7 @@
         </div>
         
         <div class="container-item swiper-slide -newYear" data-swiper-autoplay="9000">
-            <div class="prevToNext">
+            <div class="prevToNext" data-cut-name="頁尾過場">
                 <div class="prevToNext-wrap">
                     <div class="prevToNext-logo">
                         <div class="-haveToFadeOut"><img src="./assets/image/logo.png" alt=""></div>
@@ -937,7 +939,7 @@
             </div>
         </div>
         <div class="container-item swiper-slide -cartIn" data-swiper-autoplay="10000">
-            <div class="important">
+            <div class="important" data-cut-name="促銷頁">
                 <div class="important-memo">
                     <div>
                         <div class="important-content">
@@ -985,7 +987,7 @@
     <script src="./assets/lib/gsap/gsap.min.js"></script>
     <script src="./assets/lib/gsap/MotionPathPlugin.min.js"></script>
     
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.min.js"></script>
     
 </body>
 
