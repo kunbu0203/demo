@@ -32,8 +32,8 @@ $(function () {
   }).trigger('resize.vh');
   $('.container-btn').click(function () {
     gtag('event', 'click', {
-        '類型': '會員頁',
-        '標籤': $('.container-btn').hasClass('-vip') ? 'VIP一起來看看' : '一般一起來看看'
+      event_category: '會員頁',
+      event_label: $('.container-btn').hasClass('-vip') ? 'VIP一起來看看' : '一般一起來看看'
     });
   });
   $('.goShop').click(function () {
@@ -48,19 +48,32 @@ $(function () {
       event_label: '再看一次'
     });
   });
-
-  window.onbeforeunload = function () {
-        // 使用者不在頁面上時要做的事……
-        gtag('event', 'stay', {
-            cut1Stay: '2000'
-        })
-    };
 });
 
 // loading
 window.onload = function () {
   $('.loading').fadeOut(300, function () {
     $('body').addClass('-loaded');
+
+    // 停留時間
+    let stayTimeData = [];
+    $('[data-cut-name]').each((index, item) => {
+      stayTimeData.push({
+        name: $(item).attr('data-cut-name'),
+        time: 0
+      });
+    });
+    let accumulateTime = 0;
+    let stayTimer = setInterval(function () {
+      setStayTimer();
+    }, 100);
+    function setStayTimer() {
+      accumulateTime += 100;
+    }
+    function clearStayTimer() {
+      clearInterval(stayTimer);
+      accumulateTime = 0;
+    }
 
     // 主要輪播
     const containerSwiper = new Swiper('[data-slider]', {
@@ -94,8 +107,13 @@ window.onload = function () {
           s.params.autoplay.delay = $('[data-swiper-autoplay]').eq(s.activeIndex).data('swiperAutoplay');
           $('.container-btn').toggleClass('hidden', s.activeIndex !== 1);
           $('.container-goShop').toggleClass('hidden', s.activeIndex !== s.slides.length - 1);
+          stayTimeData[s.previousIndex].time = stayTimeData[s.previousIndex].time + accumulateTime + 100;
+          clearStayTimer();
         },
         slideChangeTransitionEnd() {
+          stayTimer = setInterval(function () {
+            setStayTimer();
+          }, 100);
           $('[data-swiper-autoplay]').removeClass('-changeStart');
           $('.swiper-slide-active .-haveToFadeOut').removeAttr('style');
         }
@@ -108,6 +126,41 @@ window.onload = function () {
       e.preventDefault();
       containerSwiper.slideTo(0);
     });
+    function passStayTime() {
+      stayTimeData[containerSwiper.activeIndex].time = stayTimeData[containerSwiper.activeIndex].time + accumulateTime + 200;
+      const params = {};
+      stayTimeData.filter(item => item.time > 0).forEach(item => {
+        params[item.name] = item.time;
+      });
+      gtag('event', '瀏覽', params);
+    }
+    // 桌機的關閉頁籤
+    window.onbeforeunload = function () {
+      passStayTime();
+    };
+
+    // 桌機的切換頁籤
+    // 手機的切換頁籤
+    // 手機的退回桌面
+    document.onvisibilitychange = function () {
+      switch (document.visibilityState) {
+        case 'hidden':
+          passStayTime();
+          break;
+        case 'visible':
+          clearStayTimer();
+          stayTimeData = stayTimeData.map(item => {
+            return {
+              name: item.name,
+              time: 0
+            };
+          });
+          stayTimer = setInterval(function () {
+            setStayTimer();
+          }, 100);
+          break;
+      }
+    };
 
     // 長按暫停
     let timer = 0;
